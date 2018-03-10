@@ -6,5 +6,7 @@
       "barStyle": "dark-content",
       "backgroundColor": "#FFF"
     }
-  }
+  },
+  "name": "nativefrontend",
+  "displayName": "App"
 }
