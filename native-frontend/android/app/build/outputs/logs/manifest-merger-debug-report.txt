@@ -1,12 +1,24 @@
 -- Merging decision tree log ---
 manifest
-ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:1:1-32:12
-INJECTED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:1:1-32:12
-INJECTED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:1:1-32:12
-INJECTED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:1:1-32:12
+ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:1:1-36:12
+INJECTED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:1:1-36:12
+INJECTED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:1:1-36:12
+INJECTED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:1:1-36:12
+MERGED from [:react-native-maps] G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\node_modules\react-native-maps\lib\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:2:1-12:12
 MERGED from [com.facebook.react:react-native:0.51.0] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\react-native-0.51.0.aar\9dd7c173b878c212ef771bf64fdc2d05\AndroidManifest.xml:2:1-15:12
-MERGED from [com.android.support:appcompat-v7:23.0.1] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.0.1.aar\07a9ac65e5c6fc2ac86f80947d156d06\AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:support-v4:23.0.1] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-v4-23.0.1.aar\4ef6e7daad23d08920cd25f2d60c3219\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.2.aar\a54dd4439e1e7f07416a1bb93c9ccc28\AndroidManifest.xml:17:1-31:12
+MERGED from [com.google.android.gms:play-services-maps:10.2.4] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\play-services-maps-10.2.4.aar\c069dd6b35357a2fecbfbdf79f604817\AndroidManifest.xml:16:1-25:12
+MERGED from [com.google.android.gms:play-services-base:10.2.4] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\play-services-base-10.2.4.aar\7b3a219e74c21f2c72184167bfb96d7a\AndroidManifest.xml:16:1-21:12
+MERGED from [com.android.support:animated-vector-drawable:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.2.aar\165aec444ee93068545aecc865dab81e\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.2.aar\bf67747e5443e15f732e855576383c00\AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-tasks:10.2.4] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\play-services-tasks-10.2.4.aar\e7d015d93315b1129c77911f466e7c02\AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-basement:10.2.4] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.2.4.aar\c5e7114092a07008256f1d2b7aba6edc\AndroidManifest.xml:16:1-23:12
+MERGED from [com.android.support:support-v4:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.2.aar\5b9f2941f92a1b07c4d533467eb751ac\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.2.aar\cb2f3013f885e5851f407be1c5390559\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.2.aar\90430dcecf2676b99848fe0173b63e20\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.2.aar\6e1ac43f32ef16f999bc71b9f50b5d79\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.2.aar\d5d1c6582eb27c8306aec91ff75139a3\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.2.aar\cf3a866e8e4b6657c743974dbfb7b0eb\AndroidManifest.xml:17:1-31:12
 MERGED from [com.facebook.fbui.textlayoutbuilder:textlayoutbuilder:1.0.0] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\textlayoutbuilder-1.0.0.aar\2147464a9c38d959d8db23f8458874e1\AndroidManifest.xml:10:1-18:12
 MERGED from [com.facebook.fresco:fresco:1.3.0] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\fresco-1.3.0.aar\5b74f12a14ded05008e221a06ec64fec\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.3.0] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\imagepipeline-okhttp3-1.3.0.aar\1c0956a51dcf3da2335652997b7f049f\AndroidManifest.xml:2:1-9:12
@@ -16,9 +28,9 @@ MERGED from [com.facebook.fresco:drawee:1.3.0] C:\Users\Rafa³PC\.gradle\caches\t
 MERGED from [com.facebook.fresco:imagepipeline:1.3.0] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\imagepipeline-1.3.0.aar\cdbc3a48e677bb8d2c3fa65b11ceee3d\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:imagepipeline-base:1.3.0] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\imagepipeline-base-1.3.0.aar\8451cc580de1a130aa20bbff39b18f61\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:fbcore:1.3.0] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\fbcore-1.3.0.aar\b10b3cbebb13fb49af568e116749a179\AndroidManifest.xml:2:1-9:12
-INJECTED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:1:1-32:12
-INJECTED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:1:1-32:12
-INJECTED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:1:1-32:12
+INJECTED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:1:1-36:12
+INJECTED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:1:1-36:12
+INJECTED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:1:1-36:12
 	package
 		ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:2:5-33
 		INJECTED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml
@@ -35,10 +47,14 @@ INJECTED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-fronte
 		INJECTED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.INTERNET
 ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:6:5-67
+MERGED from [:react-native-maps] G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\node_modules\react-native-maps\lib\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:9:5-67
+MERGED from [:react-native-maps] G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\node_modules\react-native-maps\lib\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:9:5-67
+MERGED from [com.google.android.gms:play-services-maps:10.2.4] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\play-services-maps-10.2.4.aar\c069dd6b35357a2fecbfbdf79f604817\AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-maps:10.2.4] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\play-services-maps-10.2.4.aar\c069dd6b35357a2fecbfbdf79f604817\AndroidManifest.xml:20:5-66
 	android:name
 		ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:6:22-64
 uses-permission#android.permission.SYSTEM_ALERT_WINDOW
-ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:7:5-77
+ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:7:5-78
 MERGED from [com.facebook.react:react-native:0.51.0] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\react-native-0.51.0.aar\9dd7c173b878c212ef771bf64fdc2d05\AndroidManifest.xml:11:5-78
 MERGED from [com.facebook.react:react-native:0.51.0] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\react-native-0.51.0.aar\9dd7c173b878c212ef771bf64fdc2d05\AndroidManifest.xml:11:5-78
 	android:name
@@ -47,12 +63,36 @@ uses-sdk
 ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:9:5-11:41
 INJECTED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:9:5-11:41
 INJECTED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:9:5-11:41
+MERGED from [:react-native-maps] G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\node_modules\react-native-maps\lib\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-maps] G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\node_modules\react-native-maps\lib\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.react:react-native:0.51.0] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\react-native-0.51.0.aar\9dd7c173b878c212ef771bf64fdc2d05\AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.51.0] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\react-native-0.51.0.aar\9dd7c173b878c212ef771bf64fdc2d05\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:23.0.1] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.0.1.aar\07a9ac65e5c6fc2ac86f80947d156d06\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:23.0.1] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.0.1.aar\07a9ac65e5c6fc2ac86f80947d156d06\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.0.1] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-v4-23.0.1.aar\4ef6e7daad23d08920cd25f2d60c3219\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.0.1] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-v4-23.0.1.aar\4ef6e7daad23d08920cd25f2d60c3219\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.2.aar\a54dd4439e1e7f07416a1bb93c9ccc28\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.2.aar\a54dd4439e1e7f07416a1bb93c9ccc28\AndroidManifest.xml:21:5-23:78
+MERGED from [com.google.android.gms:play-services-maps:10.2.4] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\play-services-maps-10.2.4.aar\c069dd6b35357a2fecbfbdf79f604817\AndroidManifest.xml:23:5-43
+MERGED from [com.google.android.gms:play-services-maps:10.2.4] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\play-services-maps-10.2.4.aar\c069dd6b35357a2fecbfbdf79f604817\AndroidManifest.xml:23:5-43
+MERGED from [com.google.android.gms:play-services-base:10.2.4] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\play-services-base-10.2.4.aar\7b3a219e74c21f2c72184167bfb96d7a\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-base:10.2.4] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\play-services-base-10.2.4.aar\7b3a219e74c21f2c72184167bfb96d7a\AndroidManifest.xml:17:5-43
+MERGED from [com.android.support:animated-vector-drawable:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.2.aar\165aec444ee93068545aecc865dab81e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.2.aar\165aec444ee93068545aecc865dab81e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.2.aar\bf67747e5443e15f732e855576383c00\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.2.aar\bf67747e5443e15f732e855576383c00\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:10.2.4] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\play-services-tasks-10.2.4.aar\e7d015d93315b1129c77911f466e7c02\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-tasks:10.2.4] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\play-services-tasks-10.2.4.aar\e7d015d93315b1129c77911f466e7c02\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-basement:10.2.4] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.2.4.aar\c5e7114092a07008256f1d2b7aba6edc\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-basement:10.2.4] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.2.4.aar\c5e7114092a07008256f1d2b7aba6edc\AndroidManifest.xml:17:5-43
+MERGED from [com.android.support:support-v4:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.2.aar\5b9f2941f92a1b07c4d533467eb751ac\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.2.aar\5b9f2941f92a1b07c4d533467eb751ac\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.2.aar\cb2f3013f885e5851f407be1c5390559\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.2.aar\cb2f3013f885e5851f407be1c5390559\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.2.aar\90430dcecf2676b99848fe0173b63e20\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.2.aar\90430dcecf2676b99848fe0173b63e20\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.2.aar\6e1ac43f32ef16f999bc71b9f50b5d79\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.2.aar\6e1ac43f32ef16f999bc71b9f50b5d79\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.2.aar\d5d1c6582eb27c8306aec91ff75139a3\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.2.aar\d5d1c6582eb27c8306aec91ff75139a3\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.2.aar\cf3a866e8e4b6657c743974dbfb7b0eb\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.2.aar\cf3a866e8e4b6657c743974dbfb7b0eb\AndroidManifest.xml:21:5-23:58
 MERGED from [com.facebook.fbui.textlayoutbuilder:textlayoutbuilder:1.0.0] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\textlayoutbuilder-1.0.0.aar\2147464a9c38d959d8db23f8458874e1\AndroidManifest.xml:14:5-16:41
 MERGED from [com.facebook.fbui.textlayoutbuilder:textlayoutbuilder:1.0.0] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\textlayoutbuilder-1.0.0.aar\2147464a9c38d959d8db23f8458874e1\AndroidManifest.xml:14:5-16:41
 MERGED from [com.facebook.fresco:fresco:1.3.0] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\fresco-1.3.0.aar\5b74f12a14ded05008e221a06ec64fec\AndroidManifest.xml:5:5-7:41
@@ -71,6 +111,8 @@ MERGED from [com.facebook.fresco:fbcore:1.3.0] C:\Users\Rafa³PC\.gradle\caches\t
 MERGED from [com.facebook.fresco:fbcore:1.3.0] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\fbcore-1.3.0.aar\b10b3cbebb13fb49af568e116749a179\AndroidManifest.xml:5:5-7:41
 INJECTED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:9:5-11:41
 INJECTED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:9:5-11:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.2.aar\a54dd4439e1e7f07416a1bb93c9ccc28\AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
 		ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:11:9-38
 		INJECTED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml
@@ -80,54 +122,132 @@ INJECTED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-fronte
 		INJECTED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml
 		INJECTED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml
 application
-ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:13:5-30:19
+ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:13:5-34:19
 MERGED from [com.facebook.react:react-native:0.51.0] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\react-native-0.51.0.aar\9dd7c173b878c212ef771bf64fdc2d05\AndroidManifest.xml:13:5-20
 MERGED from [com.facebook.react:react-native:0.51.0] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\react-native-0.51.0.aar\9dd7c173b878c212ef771bf64fdc2d05\AndroidManifest.xml:13:5-20
-MERGED from [com.android.support:appcompat-v7:23.0.1] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.0.1.aar\07a9ac65e5c6fc2ac86f80947d156d06\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.0.1] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.0.1.aar\07a9ac65e5c6fc2ac86f80947d156d06\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.0.1] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-v4-23.0.1.aar\4ef6e7daad23d08920cd25f2d60c3219\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.0.1] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-v4-23.0.1.aar\4ef6e7daad23d08920cd25f2d60c3219\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.2.aar\a54dd4439e1e7f07416a1bb93c9ccc28\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.2.aar\a54dd4439e1e7f07416a1bb93c9ccc28\AndroidManifest.xml:25:5-29:19
+MERGED from [com.google.android.gms:play-services-maps:10.2.4] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\play-services-maps-10.2.4.aar\c069dd6b35357a2fecbfbdf79f604817\AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-maps:10.2.4] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\play-services-maps-10.2.4.aar\c069dd6b35357a2fecbfbdf79f604817\AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-base:10.2.4] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\play-services-base-10.2.4.aar\7b3a219e74c21f2c72184167bfb96d7a\AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-base:10.2.4] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\play-services-base-10.2.4.aar\7b3a219e74c21f2c72184167bfb96d7a\AndroidManifest.xml:18:5-20:19
+MERGED from [com.android.support:animated-vector-drawable:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.2.aar\165aec444ee93068545aecc865dab81e\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.2.aar\165aec444ee93068545aecc865dab81e\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.2.aar\bf67747e5443e15f732e855576383c00\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.2.aar\bf67747e5443e15f732e855576383c00\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-tasks:10.2.4] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\play-services-tasks-10.2.4.aar\e7d015d93315b1129c77911f466e7c02\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-tasks:10.2.4] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\play-services-tasks-10.2.4.aar\e7d015d93315b1129c77911f466e7c02\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:10.2.4] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.2.4.aar\c5e7114092a07008256f1d2b7aba6edc\AndroidManifest.xml:19:5-21:19
+MERGED from [com.google.android.gms:play-services-basement:10.2.4] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.2.4.aar\c5e7114092a07008256f1d2b7aba6edc\AndroidManifest.xml:19:5-21:19
+MERGED from [com.android.support:support-v4:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.2.aar\5b9f2941f92a1b07c4d533467eb751ac\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.2.aar\5b9f2941f92a1b07c4d533467eb751ac\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.2.aar\cb2f3013f885e5851f407be1c5390559\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.2.aar\cb2f3013f885e5851f407be1c5390559\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.2.aar\90430dcecf2676b99848fe0173b63e20\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.2.aar\90430dcecf2676b99848fe0173b63e20\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.2.aar\6e1ac43f32ef16f999bc71b9f50b5d79\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.2.aar\6e1ac43f32ef16f999bc71b9f50b5d79\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.2.aar\d5d1c6582eb27c8306aec91ff75139a3\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.2.aar\d5d1c6582eb27c8306aec91ff75139a3\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.2.aar\cf3a866e8e4b6657c743974dbfb7b0eb\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.2.aar\cf3a866e8e4b6657c743974dbfb7b0eb\AndroidManifest.xml:25:5-29:19
 MERGED from [com.facebook.soloader:soloader:0.1.0] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\soloader-0.1.0.aar\981db42e3f1992d17259035d5365d0bd\AndroidManifest.xml:3:3-17
 MERGED from [com.facebook.soloader:soloader:0.1.0] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\soloader-0.1.0.aar\981db42e3f1992d17259035d5365d0bd\AndroidManifest.xml:3:3-17
 MERGED from [org.webkit:android-jsc:r174650] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\android-jsc-r174650.aar\722bb3986a17e5818767a19a96d21f9e\AndroidManifest.xml:2:3-17
 MERGED from [org.webkit:android-jsc:r174650] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\android-jsc-r174650.aar\722bb3986a17e5818767a19a96d21f9e\AndroidManifest.xml:2:3-17
 	android:label
-		ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:16:7-39
+		ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:17:9-41
 	android:icon
-		ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:17:7-41
+		ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:16:9-43
 	android:allowBackup
-		ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:15:7-33
+		ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:15:9-35
 	android:theme
-		ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:18:7-38
+		ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:18:9-40
 	android:name
-		ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:14:7-38
+		ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:14:9-40
+meta-data#com.google.android.geo.API_KEY
+ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:19:9-21:71
+	android:value
+		ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:21:13-68
+	android:name
+		ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:20:13-58
 activity#com.nativefrontend.MainActivity
-ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:19:7-28:18
+ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:23:9-32:20
 	android:label
-		ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:21:9-41
+		ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:26:13-45
 	android:windowSoftInputMode
-		ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:23:9-51
+		ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:27:13-55
 	android:configChanges
-		ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:22:9-79
+		ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:25:13-83
 	android:name
-		ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:20:9-37
+		ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:24:13-41
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:24:9-27:25
+ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:28:13-31:29
 action#android.intent.action.MAIN
-ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:25:13-65
+ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:29:17-69
 	android:name
-		ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:25:21-62
+		ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:29:25-66
 category#android.intent.category.LAUNCHER
-ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:26:13-73
+ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:30:17-77
 	android:name
-		ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:26:23-70
+		ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:30:27-74
 activity#com.facebook.react.devsupport.DevSettingsActivity
-ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:29:7-84
+ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:33:9-86
 	android:name
-		ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:29:17-81
+		ADDED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:33:19-83
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from [:react-native-maps] G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\node_modules\react-native-maps\lib\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:10:5-81
+	android:name
+		ADDED from [:react-native-maps] G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\node_modules\react-native-maps\lib\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:10:22-78
+meta-data#android.support.VERSION
+ADDED from [com.android.support:appcompat-v7:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.2.aar\a54dd4439e1e7f07416a1bb93c9ccc28\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.2.aar\165aec444ee93068545aecc865dab81e\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.2.aar\165aec444ee93068545aecc865dab81e\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.2.aar\bf67747e5443e15f732e855576383c00\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.2.aar\bf67747e5443e15f732e855576383c00\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.2.aar\5b9f2941f92a1b07c4d533467eb751ac\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.2.aar\5b9f2941f92a1b07c4d533467eb751ac\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.2.aar\cb2f3013f885e5851f407be1c5390559\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.2.aar\cb2f3013f885e5851f407be1c5390559\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.2.aar\90430dcecf2676b99848fe0173b63e20\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.2.aar\90430dcecf2676b99848fe0173b63e20\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.2.aar\6e1ac43f32ef16f999bc71b9f50b5d79\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.2.aar\6e1ac43f32ef16f999bc71b9f50b5d79\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.2.aar\d5d1c6582eb27c8306aec91ff75139a3\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.2.aar\d5d1c6582eb27c8306aec91ff75139a3\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.2.aar\cf3a866e8e4b6657c743974dbfb7b0eb\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.2.aar\cf3a866e8e4b6657c743974dbfb7b0eb\AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:appcompat-v7:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.2.aar\a54dd4439e1e7f07416a1bb93c9ccc28\AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:appcompat-v7:26.0.2] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.2.aar\a54dd4439e1e7f07416a1bb93c9ccc28\AndroidManifest.xml:27:13-51
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.gms:play-services-maps:10.2.4] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\play-services-maps-10.2.4.aar\c069dd6b35357a2fecbfbdf79f604817\AndroidManifest.xml:19:5-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:10.2.4] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\play-services-maps-10.2.4.aar\c069dd6b35357a2fecbfbdf79f604817\AndroidManifest.xml:19:22-76
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:10.2.4] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\play-services-maps-10.2.4.aar\c069dd6b35357a2fecbfbdf79f604817\AndroidManifest.xml:21:5-77
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:10.2.4] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\play-services-maps-10.2.4.aar\c069dd6b35357a2fecbfbdf79f604817\AndroidManifest.xml:21:19-51
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:10.2.4] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\play-services-maps-10.2.4.aar\c069dd6b35357a2fecbfbdf79f604817\AndroidManifest.xml:21:52-75
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:10.2.4] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\play-services-base-10.2.4.aar\7b3a219e74c21f2c72184167bfb96d7a\AndroidManifest.xml:19:9-172
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:10.2.4] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\play-services-base-10.2.4.aar\7b3a219e74c21f2c72184167bfb96d7a\AndroidManifest.xml:19:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:10.2.4] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\play-services-base-10.2.4.aar\7b3a219e74c21f2c72184167bfb96d7a\AndroidManifest.xml:19:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:10.2.4] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\play-services-base-10.2.4.aar\7b3a219e74c21f2c72184167bfb96d7a\AndroidManifest.xml:19:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:10.2.4] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.2.4.aar\c5e7114092a07008256f1d2b7aba6edc\AndroidManifest.xml:20:9-121
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:10.2.4] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.2.4.aar\c5e7114092a07008256f1d2b7aba6edc\AndroidManifest.xml:20:66-119
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:10.2.4] C:\Users\Rafa³PC\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.2.4.aar\c5e7114092a07008256f1d2b7aba6edc\AndroidManifest.xml:20:20-65
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-IMPLIED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:1:1-32:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
+IMPLIED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:1:1-36:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
 uses-permission#android.permission.READ_PHONE_STATE
-IMPLIED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:1:1-32:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
+IMPLIED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:1:1-36:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-IMPLIED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:1:1-32:12 reason: org.webkit.android_jsc requested WRITE_EXTERNAL_STORAGE
+IMPLIED from G:\Programowanie\e-technologie\E-Technologie-Projekt\native-frontend\android\app\src\main\AndroidManifest.xml:1:1-36:12 reason: org.webkit.android_jsc requested WRITE_EXTERNAL_STORAGE

@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "G:\\Programowanie\\e-technologie\\E-Technologie-Projekt\\native-frontend\\android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.0.2.aar\\6f59bd615fa90855fdd41bb427274500\\res\\layout-v21\\notification_action.xml"
+    },
+    {
+        "merged": "G:\\Programowanie\\e-technologie\\E-Technologie-Projekt\\native-frontend\\android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.0.2.aar\\6f59bd615fa90855fdd41bb427274500\\res\\layout-v21\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "G:\\Programowanie\\e-technologie\\E-Technologie-Projekt\\native-frontend\\android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.0.2.aar\\6f59bd615fa90855fdd41bb427274500\\res\\layout-v21\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "G:\\Programowanie\\e-technologie\\E-Technologie-Projekt\\native-frontend\\android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.0.2.aar\\6f59bd615fa90855fdd41bb427274500\\res\\layout-v21\\notification_template_custom_big.xml"
+    }
+]

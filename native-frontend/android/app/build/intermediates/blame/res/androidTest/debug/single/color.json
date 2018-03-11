@@ -1,38 +1,90 @@
 [
     {
+        "merged": "G:\\Programowanie\\e-technologie\\E-Technologie-Projekt\\native-frontend\\android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_tint_switch_track.xml",
+        "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.2.aar\\3cebaba2097dc039cd09b79a4c720745\\res\\color\\abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "G:\\Programowanie\\e-technologie\\E-Technologie-Projekt\\native-frontend\\android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\common_google_signin_btn_text_light.xml",
+        "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-10.2.4.aar\\3794d63b34f74df116156115bc2a2e20\\res\\color\\common_google_signin_btn_text_light.xml"
+    },
+    {
         "merged": "G:\\Programowanie\\e-technologie\\E-Technologie-Projekt\\native-frontend\\android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\switch_thumb_material_dark.xml",
-        "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.0.1.aar\\d6812b38e6f0b2fa4749ce17d92a4a40\\res\\color\\switch_thumb_material_dark.xml"
+        "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.2.aar\\3cebaba2097dc039cd09b79a4c720745\\res\\color\\switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "G:\\Programowanie\\e-technologie\\E-Technologie-Projekt\\native-frontend\\android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_tint_default.xml",
+        "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.2.aar\\3cebaba2097dc039cd09b79a4c720745\\res\\color\\abc_tint_default.xml"
+    },
+    {
+        "merged": "G:\\Programowanie\\e-technologie\\E-Technologie-Projekt\\native-frontend\\android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\common_google_signin_btn_text_dark.xml",
+        "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-10.2.4.aar\\3794d63b34f74df116156115bc2a2e20\\res\\color\\common_google_signin_btn_text_dark.xml"
     },
     {
         "merged": "G:\\Programowanie\\e-technologie\\E-Technologie-Projekt\\native-frontend\\android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_secondary_text_material_light.xml",
-        "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.0.1.aar\\d6812b38e6f0b2fa4749ce17d92a4a40\\res\\color\\abc_secondary_text_material_light.xml"
+        "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.2.aar\\3cebaba2097dc039cd09b79a4c720745\\res\\color\\abc_secondary_text_material_light.xml"
+    },
+    {
+        "merged": "G:\\Programowanie\\e-technologie\\E-Technologie-Projekt\\native-frontend\\android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\common_google_signin_btn_tint.xml",
+        "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-10.2.4.aar\\3794d63b34f74df116156115bc2a2e20\\res\\color\\common_google_signin_btn_tint.xml"
+    },
+    {
+        "merged": "G:\\Programowanie\\e-technologie\\E-Technologie-Projekt\\native-frontend\\android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_btn_colored_borderless_text_material.xml",
+        "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.2.aar\\3cebaba2097dc039cd09b79a4c720745\\res\\color\\abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "G:\\Programowanie\\e-technologie\\E-Technologie-Projekt\\native-frontend\\android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_tint_spinner.xml",
+        "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.2.aar\\3cebaba2097dc039cd09b79a4c720745\\res\\color\\abc_tint_spinner.xml"
     },
     {
         "merged": "G:\\Programowanie\\e-technologie\\E-Technologie-Projekt\\native-frontend\\android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_secondary_text_material_dark.xml",
-        "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.0.1.aar\\d6812b38e6f0b2fa4749ce17d92a4a40\\res\\color\\abc_secondary_text_material_dark.xml"
+        "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.2.aar\\3cebaba2097dc039cd09b79a4c720745\\res\\color\\abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "G:\\Programowanie\\e-technologie\\E-Technologie-Projekt\\native-frontend\\android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_tint_seek_thumb.xml",
+        "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.2.aar\\3cebaba2097dc039cd09b79a4c720745\\res\\color\\abc_tint_seek_thumb.xml"
     },
     {
         "merged": "G:\\Programowanie\\e-technologie\\E-Technologie-Projekt\\native-frontend\\android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_search_url_text.xml",
-        "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.0.1.aar\\d6812b38e6f0b2fa4749ce17d92a4a40\\res\\color\\abc_search_url_text.xml"
+        "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.2.aar\\3cebaba2097dc039cd09b79a4c720745\\res\\color\\abc_search_url_text.xml"
+    },
+    {
+        "merged": "G:\\Programowanie\\e-technologie\\E-Technologie-Projekt\\native-frontend\\android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_hint_foreground_material_dark.xml",
+        "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.2.aar\\3cebaba2097dc039cd09b79a4c720745\\res\\color\\abc_hint_foreground_material_dark.xml"
     },
     {
         "merged": "G:\\Programowanie\\e-technologie\\E-Technologie-Projekt\\native-frontend\\android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_disable_only_material_light.xml",
-        "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.0.1.aar\\d6812b38e6f0b2fa4749ce17d92a4a40\\res\\color\\abc_primary_text_disable_only_material_light.xml"
+        "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.2.aar\\3cebaba2097dc039cd09b79a4c720745\\res\\color\\abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "G:\\Programowanie\\e-technologie\\E-Technologie-Projekt\\native-frontend\\android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_hint_foreground_material_light.xml",
+        "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.2.aar\\3cebaba2097dc039cd09b79a4c720745\\res\\color\\abc_hint_foreground_material_light.xml"
+    },
+    {
+        "merged": "G:\\Programowanie\\e-technologie\\E-Technologie-Projekt\\native-frontend\\android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_btn_colored_text_material.xml",
+        "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.2.aar\\3cebaba2097dc039cd09b79a4c720745\\res\\color\\abc_btn_colored_text_material.xml"
     },
     {
         "merged": "G:\\Programowanie\\e-technologie\\E-Technologie-Projekt\\native-frontend\\android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\switch_thumb_material_light.xml",
-        "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.0.1.aar\\d6812b38e6f0b2fa4749ce17d92a4a40\\res\\color\\switch_thumb_material_light.xml"
+        "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.2.aar\\3cebaba2097dc039cd09b79a4c720745\\res\\color\\switch_thumb_material_light.xml"
     },
     {
         "merged": "G:\\Programowanie\\e-technologie\\E-Technologie-Projekt\\native-frontend\\android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_disable_only_material_dark.xml",
-        "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.0.1.aar\\d6812b38e6f0b2fa4749ce17d92a4a40\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
+        "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.2.aar\\3cebaba2097dc039cd09b79a4c720745\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
     },
     {
         "merged": "G:\\Programowanie\\e-technologie\\E-Technologie-Projekt\\native-frontend\\android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_material_light.xml",
-        "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.0.1.aar\\d6812b38e6f0b2fa4749ce17d92a4a40\\res\\color\\abc_primary_text_material_light.xml"
+        "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.2.aar\\3cebaba2097dc039cd09b79a4c720745\\res\\color\\abc_primary_text_material_light.xml"
     },
     {
         "merged": "G:\\Programowanie\\e-technologie\\E-Technologie-Projekt\\native-frontend\\android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_material_dark.xml",
-        "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.0.1.aar\\d6812b38e6f0b2fa4749ce17d92a4a40\\res\\color\\abc_primary_text_material_dark.xml"
+        "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.2.aar\\3cebaba2097dc039cd09b79a4c720745\\res\\color\\abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "G:\\Programowanie\\e-technologie\\E-Technologie-Projekt\\native-frontend\\android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_tint_btn_checkable.xml",
+        "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.2.aar\\3cebaba2097dc039cd09b79a4c720745\\res\\color\\abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "G:\\Programowanie\\e-technologie\\E-Technologie-Projekt\\native-frontend\\android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_tint_edittext.xml",
+        "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.2.aar\\3cebaba2097dc039cd09b79a4c720745\\res\\color\\abc_tint_edittext.xml"
     }
 ]

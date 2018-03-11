@@ -4,15 +4,8 @@
             "outputFile": "G:\\Programowanie\\e-technologie\\E-Technologie-Projekt\\native-frontend\\android\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v18\\values-v18.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.0.1.aar\\d6812b38e6f0b2fa4749ce17d92a4a40\\res\\values-v18\\values-v18.xml",
+                    "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.2.aar\\3cebaba2097dc039cd09b79a4c720745\\res\\values-v18\\values-v18.xml",
                     "from": {
-                        "startLines": "4",
-                        "startColumns": "4",
-                        "startOffsets": "280",
-                        "endColumns": "48",
-                        "endOffsets": "324"
-                    },
-                    "to": {
                         "startLines": "2",
                         "startColumns": "4",
                         "startOffsets": "55",
@@ -26,15 +19,8 @@
             "outputFile": "G:\\Programowanie\\e-technologie\\E-Technologie-Projekt\\native-frontend\\android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-v18\\values-v18.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.0.1.aar\\d6812b38e6f0b2fa4749ce17d92a4a40\\res\\values-v18\\values-v18.xml",
+                    "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.2.aar\\3cebaba2097dc039cd09b79a4c720745\\res\\values-v18\\values-v18.xml",
                     "from": {
-                        "startLines": "4",
-                        "startColumns": "4",
-                        "startOffsets": "280",
-                        "endColumns": "48",
-                        "endOffsets": "324"
-                    },
-                    "to": {
                         "startLines": "2",
                         "startColumns": "4",
                         "startOffsets": "55",

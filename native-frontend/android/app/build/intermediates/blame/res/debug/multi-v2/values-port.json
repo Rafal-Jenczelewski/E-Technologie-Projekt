@@ -4,15 +4,8 @@
             "outputFile": "G:\\Programowanie\\e-technologie\\E-Technologie-Projekt\\native-frontend\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.0.1.aar\\07a9ac65e5c6fc2ac86f80947d156d06\\res\\values-port\\values-port.xml",
+                    "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.2.aar\\a54dd4439e1e7f07416a1bb93c9ccc28\\res\\values-port\\values-port.xml",
                     "from": {
-                        "startLines": "4",
-                        "startColumns": "4",
-                        "startOffsets": "280",
-                        "endColumns": "55",
-                        "endOffsets": "331"
-                    },
-                    "to": {
                         "startLines": "2",
                         "startColumns": "4",
                         "startOffsets": "55",
@@ -26,15 +19,8 @@
             "outputFile": "G:\\Programowanie\\e-technologie\\E-Technologie-Projekt\\native-frontend\\android\\app\\build\\intermediates\\res\\merged\\debug\\values-port\\values-port.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.0.1.aar\\07a9ac65e5c6fc2ac86f80947d156d06\\res\\values-port\\values-port.xml",
+                    "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.2.aar\\a54dd4439e1e7f07416a1bb93c9ccc28\\res\\values-port\\values-port.xml",
                     "from": {
-                        "startLines": "4",
-                        "startColumns": "4",
-                        "startOffsets": "280",
-                        "endColumns": "55",
-                        "endOffsets": "331"
-                    },
-                    "to": {
                         "startLines": "2",
                         "startColumns": "4",
                         "startOffsets": "55",

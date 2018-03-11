@@ -4,16 +4,8 @@
             "outputFile": "G:\\Programowanie\\e-technologie\\E-Technologie-Projekt\\native-frontend\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v12\\values-v12.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.0.1.aar\\07a9ac65e5c6fc2ac86f80947d156d06\\res\\values-v12\\values-v12.xml",
+                    "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.2.aar\\a54dd4439e1e7f07416a1bb93c9ccc28\\res\\values-v12\\values-v12.xml",
                     "from": {
-                        "startLines": "4,7,10,11",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "285,509,709,828",
-                        "endLines": "6,9,10,11",
-                        "endColumns": "12,12,118,94",
-                        "endOffsets": "504,704,823,918"
-                    },
-                    "to": {
                         "startLines": "2,5,8,9",
                         "startColumns": "4,4,4,4",
                         "startOffsets": "55,279,479,598",
@@ -28,16 +20,8 @@
             "outputFile": "G:\\Programowanie\\e-technologie\\E-Technologie-Projekt\\native-frontend\\android\\app\\build\\intermediates\\res\\merged\\debug\\values-v12\\values-v12.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.0.1.aar\\07a9ac65e5c6fc2ac86f80947d156d06\\res\\values-v12\\values-v12.xml",
+                    "source": "C:\\Users\\RafałPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.2.aar\\a54dd4439e1e7f07416a1bb93c9ccc28\\res\\values-v12\\values-v12.xml",
                     "from": {
-                        "startLines": "4,7,10,11",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "285,509,709,828",
-                        "endLines": "6,9,10,11",
-                        "endColumns": "12,12,118,94",
-                        "endOffsets": "504,704,823,918"
-                    },
-                    "to": {
                         "startLines": "2,5,8,9",
                         "startColumns": "4,4,4,4",
                         "startOffsets": "55,279,479,598",
