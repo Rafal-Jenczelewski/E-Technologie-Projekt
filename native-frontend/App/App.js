@@ -1,5 +1,5 @@
 import React from 'react';
-import store from './Provider/Provider'
+import store from '../store/store'
 import TabNavigator from './TabNavigator/TabNavigator'
 import {Provider} from "react-redux";
 

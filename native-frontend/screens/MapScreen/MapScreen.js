@@ -6,8 +6,8 @@ class MapScreen extends Component {
     render() {
         return <View style={styles.container}><MapView style={styles.map}
             initialRegion={{
-                latitude: 37.78825,
-                longitude: -122.4324,
+                latitude: 51.1078852,
+                longitude: 17.0385376,
                 latitudeDelta: 0.0922,
                 longitudeDelta: 0.0421,
             }}
