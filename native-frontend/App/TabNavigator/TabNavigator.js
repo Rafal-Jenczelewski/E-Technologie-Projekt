@@ -14,6 +14,6 @@ export default TabNavigator({
         },
         tabBarPosition: 'top',
         cardStyle: {
-            padding: 200
+            padding: 2000
         }
     });
