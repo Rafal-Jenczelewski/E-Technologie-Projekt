@@ -14,6 +14,11 @@ public class MongoService {
     MongoClient client = new MongoClient("localhost", 27017); //connect to mongodb
     Datastore datastore = new Morphia().createDatastore(client, "data_test"); //select shop collection
 
+    public void clear() {
+        datastore.getCollection(Marker.class).drop();
+        datastore.getCollection(Route.class).drop();
+    }
+
     public String addMarker(Marker marker) {
         datastore.save(marker);
         return marker.getId();
@@ -35,7 +40,6 @@ public class MongoService {
     public List<Route> getAllRoutes() {
         List<Route> list = datastore.find(Route.class).asList();
         if (list != null) {
-            // list.forEach((l)->{l.setId(l.getId().toString());});
             return list;
         }
         return null;

@@ -12,12 +12,14 @@ public class Marker {
     private Boolean owned;
     private String description;
     private Boolean isPublic;
-    private double[] coordinate = new double[2];
+    private Coordinates coordinate;
+
+    //For GSON
+    public Marker(){}
 
     public Marker(Double longitude, Double latitude, String name, Boolean owned, String description, Boolean isPublic) {
         super();
-        this.coordinate[0] = longitude;
-        this.coordinate[1] = latitude;
+        coordinate = new Coordinates(latitude, longitude);
         this.name = name;
         this.owned = owned;
         this.description = description;
@@ -64,12 +66,11 @@ public class Marker {
         this.isPublic = isPublic;
     }
 
-    public double[] getCoordinate() {
+    public Coordinates getCoordinate() {
         return coordinate;
     }
 
-    public void setCoordinate(Double longitude, Double latitude) {
-        this.coordinate[0] = longitude;
-        this.coordinate[1] = latitude;
+    public void setCoordinate(Coordinates coordinate) {
+        this.coordinate = coordinate;
     }
 }

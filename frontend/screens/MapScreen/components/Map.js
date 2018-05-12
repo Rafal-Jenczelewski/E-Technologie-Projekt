@@ -17,7 +17,7 @@ class Map extends Component {
     }
 
     render() {
-        let markers = this.props.markers.map(m => (<Marker title={m.name} key={m.id} coordinate={m.coordinate}/>));
+        let markers = this.props.markers.map(m => (<Marker key={m.id} title={m.name} key={m.id} coordinate={m.coordinate}/>));
         let routes = this.props.routes.map(m => (<Polyline key={m.id} coordinates={m.coordinates} strokeWidth={4} title={m.name}/>));
         let routeMarkers = this.props.newRouteMarkers.map(m => (<Marker key={m.id} coordinate={m.coordinate} pinColor={'#0000FF'}/>));
         return <View style={styles.container}><MapView style={styles.map}

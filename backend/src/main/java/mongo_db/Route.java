@@ -12,9 +12,12 @@ public class Route {
     private String description;
     private boolean isPublic;
 
-    private double[][] coordinates;
+    private Coordinates[] coordinates;
 
-    public Route(double[][] coordinates, String name, Boolean owned, String description, Boolean isPublic) {
+    //For GSON
+    public Route() {}
+
+    public Route(Coordinates[] coordinates, String name, Boolean owned, String description, Boolean isPublic) {
         super();
         this.coordinates = coordinates;
         this.name = name;
@@ -63,17 +66,11 @@ public class Route {
         this.isPublic = isPublic;
     }
 
-    public void setCoordinates(Double[][] coordinates) {
-        //this.coordinates = coordinates;
-        int length = coordinates.length;
-        for (int i = 0; i < length; i++) {
-            for (int j = 0; j < 2; j++) {
-                this.coordinates[i][j] = coordinates[i][j];
-            }
-        }
+    public Coordinates[] getCoordinates() {
+        return coordinates;
     }
 
-    public double[][] getCoordinates() {
-        return coordinates;
+    public void setCoordinates(Coordinates[] coordinates) {
+        this.coordinates = coordinates;
     }
 }
