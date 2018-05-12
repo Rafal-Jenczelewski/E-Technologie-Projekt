@@ -12,6 +12,8 @@ public class Api {
     public static void main(String[] args) {
 
         post("/addSomeData", (req, res) -> {
+            mongo.clear();
+
             Marker marker = new Marker(51.1222822, 17.060590, "marker_test_0", true, "opis_0", true);
             mongo.addMarker(marker);
 
@@ -27,11 +29,11 @@ public class Api {
             marker = new Marker(51.18172689, 17.0514524, "marker_test_", true, "opis_4", false);
             mongo.addMarker(marker);
 
-            double[][] temp = {{51.18112689, 17.0511524}, {51.18472689, 17.0714524}};
+            Coordinates[] temp = {new Coordinates(51.18112689, 17.0511524), new Coordinates(51.18472689, 17.0714524)};
             Route route = new Route(temp, "trasa_test_0", true, "opis_0", false);
             mongo.addRoute(route);
 
-            double[][] temp1 = {{51.14112689, 17.0141524}, {51.18485689, 17.0772524}};
+            Coordinates[] temp1 = {new Coordinates(51.14112689, 17.0141524), new Coordinates(51.18485689, 17.0772524)};
             route = new Route(temp1, "trasa_test_1", true, "opis_1", false);
             mongo.addRoute(route);
 
@@ -48,17 +50,6 @@ public class Api {
             res.type("application/json");
             Route route = gsonTransformer.fromJson(req.body(), Route.class);
             return mongo.addRoute(route);
-        }, gsonTransformer::toJson);
-
-        post("/addMarkerManual", (req, res) -> {
-            Marker marker = gsonTransformer.fromJson(req.body(), Marker.class);
-            marker.setCoordinate(Double.parseDouble(req.queryParams("longitude")), Double.parseDouble(req.queryParams("latitude")));
-            marker.setName(req.queryParams("name"));
-            marker.setOwned(Boolean.valueOf(req.queryParams("owned")));
-            marker.setDescription(req.queryParams("description"));
-            marker.setIsPublic(Boolean.valueOf(req.queryParams("isPublic")));
-            res.type("application/json");
-            return mongo.addMarker(marker);
         }, gsonTransformer::toJson);
 
         get("/getAllMarkers", (req, res) -> {

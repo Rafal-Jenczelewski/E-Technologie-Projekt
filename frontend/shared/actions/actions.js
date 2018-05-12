@@ -5,7 +5,7 @@ export function getMarkers() {
         return fetchMarkers().then(res => {
             dispatch({
                 type: 'GET_MARKERS',
-                payload: res.markers
+                payload: res
             })
         })
     }
@@ -16,7 +16,7 @@ export function getRoutes() {
         return fetchPolylines().then(res => {
             dispatch({
                 type: 'GET_ROUTES',
-                payload: res.routes
+                payload: res
             })
         })
     }
