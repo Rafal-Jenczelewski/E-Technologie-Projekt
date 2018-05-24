@@ -38,28 +38,7 @@ class ListScreen extends Component {
         })
     }
 
-    async requestsGeoLocationPermission() {
-        try {
-            const granted = await PermissionsAndroid.request(
-                PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION, {
-                    title: 'SocialMaps permission',
-                    message: 'SocialMaps needs to access your location'
-                }
-            );
-            if (granted == PermissionsAndroid.RESULTS.GRANTED) {
-                console.log("Jest pozwolenie");
-            }
-            else {
-                console.log("Nie ma pozwolenia");
-            }
-        }
-        catch(err) {
-            console.log(err);
-        }
-    }
-
     componentDidMount() {
-        this.requestsGeoLocationPermission();
         this.spreadDataIntoState({
             markers: this.props.markers,
             routes: this.props.routes
