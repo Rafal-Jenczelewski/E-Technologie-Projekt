@@ -2,12 +2,20 @@ import React, {Component} from 'react'
 import {StyleSheet, View} from 'react-native'
 import {connect} from 'react-redux'
 
-let {FBLogin} = require('react-native-facebook-login')
+let {FBLogin, FBLoginManager} = require('react-native-facebook-login')
+
+FBLoginManager.loginWithPermissions(["email","user_friends"], function(error, data){
+    if (!error) {
+        console.log("Login data: ", data);
+    } else {
+        console.log("Error: ", error);
+    }
+});
 
 class MainComponent extends Component {
     render() {
         return <View style={styles.container}>
-            <FBLogin/>
+            <FBLogin style={styles.btn}/>
         </View>
     }
 }
@@ -19,6 +27,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         flex: 1
+    }
+    btn: {
+        alignSelf: 'center',
+        marginBottom: 10
     }
 });
 
