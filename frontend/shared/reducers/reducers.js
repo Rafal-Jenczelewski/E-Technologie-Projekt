@@ -30,3 +30,16 @@ export function routes(state = [], action) {
             return state;
     }
 }
+
+export function userToken(state = null, action) {
+    switch (action.type) {
+        case 'SET_TOKEN':
+            return action.payload;
+            break;
+        case 'RESET_TOKEN':
+            return null;
+            break;
+        default:
+            return state;
+    }
+}

@@ -21,10 +21,3 @@ export function getRoutes() {
         })
     }
 }
-
-export function setUserToken(token) {
-    dispatch({
-        type: 'SET_TOKEN',
-        payload: token
-    })
-}
