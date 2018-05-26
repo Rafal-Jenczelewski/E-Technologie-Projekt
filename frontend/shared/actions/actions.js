@@ -22,14 +22,14 @@ export function getRoutes() {
     }
 }
 
-export function setUserToken(token) {
+export function setUserInfo(token) {
     return {
         type: 'SET_TOKEN',
         payload: token
     }
 }
 
-export function resetUserToken() {
+export function resetUserInfo() {
     return {
         type: 'RESET_TOKEN'
     }
