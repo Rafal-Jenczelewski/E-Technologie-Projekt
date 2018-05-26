@@ -1,19 +1,19 @@
 import React, {Component} from 'react'
 import {StyleSheet, View} from 'react-native'
 import TabNavigator from '../TabNavigator/TabNavigator'
-import {resetUserToken, setUserToken} from './actions'
+import {resetUserToken, setUserToken} from '../../actions/actions'
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 
 let {FBLogin, FBLoginManager} = require('react-native-facebook-login')
 
-FBLoginManager.loginWithPermissions(["email", "user_friends"], function (error, data) {
-    if (!error) {
-        console.log("Login data: ", data);
-    } else {
-        console.log("Error: ", error);
-    }
-});
+// FBLoginManager.loginWithPermissions(["email", "user_friends"], function (error, data) {
+//     if (!error) {
+//         console.log("Login data: ", data);
+//     } else {
+//         console.log("Error: ", error);
+//     }
+// });
 
 class MainComponent extends Component {
     constructor(props) {
@@ -33,7 +33,7 @@ class MainComponent extends Component {
 
     render() {
         let comp = <View style={styles.container}>
-            <FBLogin style={styles.btn}
+            <FBLogin containerStyle={styles.btn}
                      permissions={["email","user_friends"]}
                      onLogin={(data) => this.onLogin(data.credentials.token)}
                      onLogout={() => this.onLogout()}
@@ -66,15 +66,15 @@ class MainComponent extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        // ...StyleSheet.absoluteFillObject,
+        ...StyleSheet.absoluteFillObject,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        flex: 1
+        display: 'flex'
     },
     btn: {
-        alignSelf: 'center',
-        marginBottom: 10
+        height: 50,
+        borderRadius: 5
     }
 });
 
