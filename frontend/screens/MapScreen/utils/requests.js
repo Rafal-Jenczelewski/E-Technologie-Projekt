@@ -1,25 +1,33 @@
 const api = "http://10.0.2.2:4567/";
+import store from '../../../shared/store/store'
+
+function getUserToken() {
+    return store.getState().userInfo.userInfo;
+}
+
+function getUserID() {
+    return store.getState().userInfo.userID
+}
+
+function getHeaders() {
+    return {
+        'USER_TOKEN': getUserToken()
+    };
+}
 
 export function fetchAddMarker(marker) {
     return fetch(api + "addMarker", {
         method: "POST",
-        body: JSON.stringify(marker)
+        body: JSON.stringify(Object.assign({}, marker, {userID: getUserID()})),
+        headers: getHeaders()
     }).then(res => res.json());
-
-    // return Promise.resolve({
-    //     status: 200,
-    //     id: ((Math.random() * 100) + 1)
-    // })
 }
 
 export function fetchAddRoute(route) {
     return fetch(api + "addRoute", {
         method: "POST",
-        body: JSON.stringify(route)
+        body: JSON.stringify(route),
+        headers: getHeaders()
     })
 
-    // return Promise.resolve({
-    //     status: 200,
-    //     id: ((Math.random() * 100) + 1)
-    // })
 }

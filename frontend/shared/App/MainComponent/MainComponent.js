@@ -1,19 +1,11 @@
 import React, {Component} from 'react'
 import {StyleSheet, View} from 'react-native'
 import TabNavigator from '../TabNavigator/TabNavigator'
-import {resetUserToken, setUserToken} from '../../actions/actions'
+import {resetUserInfo, setUserInfo} from '../../actions/actions'
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 
-let {FBLogin, FBLoginManager} = require('react-native-facebook-login')
-
-// FBLoginManager.loginWithPermissions(["email", "user_friends"], function (error, data) {
-//     if (!error) {
-//         console.log("Login data: ", data);
-//     } else {
-//         console.log("Error: ", error);
-//     }
-// });
+let {FBLogin} = require('react-native-facebook-login')
 
 class MainComponent extends Component {
     constructor(props) {
@@ -23,19 +15,25 @@ class MainComponent extends Component {
         this.onLogout = this.onLogout.bind(this);
     }
 
-    onLogin(token) {
-        this.props.setToken(token)
+    onLogin(data) {
+        let {userID, userInfo} = data.credentials;
+        let info = {
+            userID,
+            token: userInfo
+        };
+
+        this.props.setInfo(info);
     }
 
     onLogout() {
-        this.props.resetToken();
+        this.props.resetInfo();
     }
 
     render() {
         let comp = <View style={styles.container}>
             <FBLogin containerStyle={styles.btn}
                      permissions={["email","user_friends"]}
-                     onLogin={(data) => this.onLogin(data.credentials.token)}
+                     onLogin={(data) => this.onLogin(data)}
                      onLogout={() => this.onLogout()}
                      onLoginFound={function(data){
                          console.log("Existing login found.");
@@ -57,7 +55,7 @@ class MainComponent extends Component {
                      }}/>
         </View>;
 
-        if (this.props.token !== null)
+        if (this.props.userInfo !== null)
             comp = <TabNavigator/>;
 
         return comp;
@@ -80,14 +78,14 @@ const styles = StyleSheet.create({
 
 function mapStateToProps(state) {
     return {
-        token: state.userToken
+        userInfo: state.userInfo
     }
 }
 
 function mapDispatchToProps(dispatch) {
     return bindActionCreators({
-        setToken: setUserToken,
-        resetToken: resetUserToken
+        setInfo: setUserInfo,
+        resetInfo: resetUserInfo
     }, dispatch)
 }
 

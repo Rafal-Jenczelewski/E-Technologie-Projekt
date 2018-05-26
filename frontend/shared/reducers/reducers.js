@@ -31,7 +31,7 @@ export function routes(state = [], action) {
     }
 }
 
-export function userToken(state = null, action) {
+export function userInfo(state = null, action) {
     switch (action.type) {
         case 'SET_TOKEN':
             return action.payload;

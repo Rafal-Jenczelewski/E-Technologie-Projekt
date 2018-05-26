@@ -3,7 +3,7 @@ import {Text, View, StyleSheet, CheckBox, Button} from 'react-native'
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import {getRoutes, getMarkers} from '../../shared/actions/actions'
-import {resetUserToken} from '../../shared/actions/actions'
+import {resetUserInfo} from '../../shared/actions/actions'
 
 let {FBLogin} = require('react-native-facebook-login')
 
@@ -68,7 +68,7 @@ function mapDispatchToProps(dispatch) {
     return bindActionCreators({
         getMarkers: getMarkers,
         getRoutes: getRoutes,
-        resetToken: resetUserToken
+        resetToken: resetUserInfo
     }, dispatch)
 }
 
