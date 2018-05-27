@@ -43,3 +43,12 @@ export function userInfo(state = null, action) {
             return state;
     }
 }
+
+export function getOthers(state = true, action) {
+    switch(action.type) {
+        case 'SET_GET_OTHERS':
+            return action.payload;
+        default:
+            return state;
+    }
+}

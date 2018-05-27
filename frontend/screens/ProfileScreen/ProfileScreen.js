@@ -4,24 +4,20 @@ import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import {getRoutes, getMarkers} from '../../shared/actions/actions'
 import {resetUserInfo} from '../../shared/actions/actions'
-
+import {setGetOthers} from './actions'
 let {FBLogin} = require('react-native-facebook-login')
 
 class ProfileScreen extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            isOwnedOnly: false
-        };
-
         this.onOwnedOnlyChange = this.onOwnedOnlyChange.bind(this);
         this.onRefreshClick = this.onRefreshClick.bind(this);
         this.onLogout = this.onLogout.bind(this);
     }
 
-    onOwnedOnlyChange() {
-        this.setState(state => ({isOwnedOnly: !state.isOwnedOnly}))
+    onOwnedOnlyChange(e) {
+        this.props.setGetOthers(e)
     }
 
     onRefreshClick() {
@@ -36,7 +32,7 @@ class ProfileScreen extends Component {
     render() {
         return <View fits style={styles.container}>
             <View style={styles.ownedOnlyView}><Text>Pobierz obiekty innych użytkowników:</Text>
-                <CheckBox value={this.state.isOwnedOnly} onValueChange={this.onOwnedOnlyChange}/></View>
+                <CheckBox value={this.props.getOthers} onValueChange={this.onOwnedOnlyChange}/></View>
             <Button title={"Odśwież"} onPress={this.onRefreshClick}/>
             <FBLogin containerStyle={styles.fb}
                      onLogout={this.onLogout}/>
@@ -64,12 +60,19 @@ const styles = StyleSheet.create({
     }
 });
 
+function mapStateToProps(state) {
+    return {
+        getOthers: state.getOthers
+    }
+}
+
 function mapDispatchToProps(dispatch) {
     return bindActionCreators({
         getMarkers: getMarkers,
         getRoutes: getRoutes,
-        resetToken: resetUserInfo
+        resetToken: resetUserInfo,
+        setGetOthers: setGetOthers
     }, dispatch)
 }
 
-export default connect(null, mapDispatchToProps)(ProfileScreen)
+export default connect(mapStateToProps, mapDispatchToProps)(ProfileScreen)

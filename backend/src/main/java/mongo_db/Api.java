@@ -20,10 +20,10 @@ public class Api {
             marker = new Marker(51.1845689, 51.1845689, "Big tree!", "opis_1", false, 1L);
             mongo.addMarker(marker);
 
-            marker = new Marker(51.18415689, 17.0545594, "I like this!", "opis_2", false, 1L);
+            marker = new Marker(51.18415689, 17.0545594, "I like this!", "opis_2", true, 1L);
             mongo.addMarker(marker);
 
-            marker = new Marker(51.18145689, 17.0514594, "Best shop on Citadel!", "opis_3", false, 1L);
+            marker = new Marker(51.18145689, 17.0514594, "Best shop on Citadel!", "opis_3", true, 1L);
             mongo.addMarker(marker);
 
             marker = new Marker(51.18172689, 17.0514524, "Come here", "opis_4", false, 1L);
@@ -63,15 +63,21 @@ public class Api {
         }, gsonTransformer::toJson);
 
         get("/getMarkers", (req, res) -> {
-            String owned = req.queryParams("owned");
+            System.out.println(req.queryParams("getOthers"));
+            System.out.println(req.queryParams("userID"));
+            boolean owned = Boolean.valueOf(req.queryParams("getOthers"));
+            Long userID = Long.valueOf(req.queryParams("userID"));
             res.type("application/json");
-            return mongo.getMarkers(Boolean.valueOf(owned));
+
+            return mongo.getMarkers(owned, userID);
         }, gsonTransformer::toJson);
 
         get("/getRoutes", (req, res) -> {
-            String owned = req.queryParams("owned");
+            boolean owned = Boolean.valueOf(req.queryParams("getOthers"));
+            Long userID = Long.valueOf(req.queryParams("userID"));
             res.type("application/json");
-            return mongo.getRoutes(Boolean.valueOf(owned));
+
+            return mongo.getRoutes(owned, userID);
         }, gsonTransformer::toJson);
 
         put("/changeStatus", (req, res) -> {

@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30da0cb9-a6e5-4d04-96e5-9c3fc30512ea" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/mongo_db/ChangeStatusReqBody.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/screens/ProfileScreen/actions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mongo_db/Api.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mongo_db/Api.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mongo_db/MongoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mongo_db/MongoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mongo_db/Api.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mongo_db/Api.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mongo_db/MongoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mongo_db/MongoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/screens/ProfileScreen/ProfileScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/screens/ProfileScreen/ProfileScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/shared/reducers/reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/shared/reducers/reducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/shared/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/shared/store/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/shared/utils/requests.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/shared/utils/requests.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -49,8 +54,8 @@
       <file leaf-file-name="MongoService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/mongo_db/MongoService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="67">
-              <caret line="75" column="5" lean-forward="true" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+            <state relative-caret-position="201">
+              <caret line="70" column="96" selection-start-line="70" selection-start-column="96" selection-end-line="70" selection-end-column="96" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -61,8 +66,8 @@
       <file leaf-file-name="Api.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/mongo_db/Api.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+            <state relative-caret-position="119">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -142,14 +147,16 @@
     <findStrings>
       <find>Float</find>
       <find>marker[0-6]</find>
-      <find />
+      <find>new Gs</find>
       <find>gson</find>
       <find>L</find>
       <find>addSo</find>
+      <find>Route</find>
     </findStrings>
     <replaceStrings>
       <replace>marker</replace>
       <replace>gsonTransformer</replace>
+      <replace>Marker</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -235,7 +242,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="Vers&#9;ACTION&#9;ActivateVersionControlToolWindow&#10;termina&#9;ACTION&#9;ActivateTerminalToolWindow" />
+    <property name="SearchEverywhereHistoryKey" value="Ter&#9;ACTION&#9;ActivateTerminalToolWindow&#10;Vers&#9;ACTION&#9;ActivateVersionControlToolWindow&#10;termina&#9;ACTION&#9;ActivateTerminalToolWindow" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="project.structure.last.edited" value="SDKs" />
@@ -339,7 +346,7 @@
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5005208" side_tool="true" weight="0.48171702" />
       <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="3" weight="0.3290938" />
       <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.49947917" visible="true" weight="0.4419714" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32591414" />
       <window_info id="Capture Tool" order="2" />
@@ -811,8 +818,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mongo_db/Api.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+        <state relative-caret-position="119">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -821,8 +828,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mongo_db/MongoService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="75" column="5" lean-forward="true" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+        <state relative-caret-position="201">
+          <caret line="70" column="96" selection-start-line="70" selection-start-column="96" selection-end-line="70" selection-end-column="96" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

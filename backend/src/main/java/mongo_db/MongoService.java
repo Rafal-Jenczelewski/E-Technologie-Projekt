@@ -1,10 +1,10 @@
 package mongo_db;
 
+import org.bson.types.ObjectId;
 import org.mongodb.morphia.Datastore;
 import org.mongodb.morphia.Morphia;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 import com.mongodb.MongoClient;
 import org.mongodb.morphia.query.Query;
@@ -46,39 +46,38 @@ public class MongoService {
         return null;
     }
 
-    public List<Marker> getMarkers(boolean isGetNotOwned) {
-//        if (isGetNotOwned)
-//            return getAllMarkers();
-//
-//        List<Marker> list = datastore.find(Marker.class).asList();
-//
-//        if (list != null) {
-//            return list.stream()
-//                    .filter(p -> p.getOwned().equals(isGetNotOwned))
-//                    .collect(Collectors.toList());
-//        }
+    public List<Marker> getMarkers(boolean isGetNotOwned, Long userID) {
+        List<Marker> list = null;
 
-        return null;
+        System.out.println("Markers");
+        if (isGetNotOwned) {
+            System.out.println("get others");
+            list = datastore.createQuery(Marker.class).field("ownerID").notEqual(userID)
+                        .field("isPublic").equal(Boolean.TRUE).asList();
+            System.out.println(list.size());
+        }
+        list.addAll(datastore.createQuery(Marker.class).field("ownerID").equal(userID).asList());
+        System.out.println(list.size());
+        return list;
     }
 
-    public List<Route> getRoutes(boolean isGetNotOwned) {
-//        if (isGetNotOwned)
-//            return getAllRoutes();
-//
-//        List<Route> list = datastore.find(Route.class).asList();
-//        if (list != null) {
-//                return list.stream()
-//                        .filter(p -> p.getOwned().equals(!isGetNotOwned))
-//                        .collect(Collectors.toList());
-//        }
-        return null;
+    public List<Route> getRoutes(boolean isGetNotOwned, Long userID) {
+        List<Route> list = null;
+
+        if (isGetNotOwned) {
+             list = datastore.createQuery(Route.class).field("ownerID").notEqual(userID)
+                    .field("isPublic").equal(true).asList();
+        }
+        list.addAll(datastore.createQuery(Route.class).field("ownerID").equal(userID).asList());
+
+        return list;
     }
 
     public void changeStatus(String id, Boolean isPublic) {
-        Query<Marker> query = datastore.createQuery(Marker.class).field("ownerID").equal(id);
-        UpdateOperations<Marker> ops = datastore.createUpdateOperations(Marker.class).set("isPublic", isPublic.toString());
+        Query<Marker> query = datastore.createQuery(Marker.class).field("_id").equal(new ObjectId(id));
+        UpdateOperations<Marker> ops = datastore.createUpdateOperations(Marker.class).set("isPublic", isPublic);
 
-        datastore.update(query, ops);
+        System.out.println(datastore.update(query, ops).getUpdatedCount());
     }
 
 
