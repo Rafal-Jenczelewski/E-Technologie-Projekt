@@ -16,12 +16,14 @@ class MainComponent extends Component {
     }
 
     onLogin(data) {
-        let {userID, userInfo} = data.credentials;
+        let {userId, token} = data.credentials;
         let info = {
-            userID,
-            token: userInfo
+            userID: userId,
+            token
         };
-
+        console.log("LOGIN");
+        console.log(data);
+        console.log(info);
         this.props.setInfo(info);
     }
 

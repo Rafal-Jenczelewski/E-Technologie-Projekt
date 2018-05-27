@@ -71,7 +71,11 @@ class MarkerView extends Component {
         let coordsView = null;
         let publicCheckbox = null;
 
-        if (this.props.marker.ownerID === this.props.userID) {
+        console.log('ownerID:');
+        console.log(this.props.marker.ownerID);
+        console.log('userID:');
+        console.log(this.props.userID);
+        if (this.props.marker.ownerID == this.props.userID) {
             publicCheckbox = <View style={styles.publicView}><Text>Publiczny:</Text><CheckBox value={this.state.isPublic} onValueChange={this.onPublicChange} /></View>
         }
 

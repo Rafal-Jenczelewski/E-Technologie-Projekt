@@ -63,7 +63,8 @@ class MapScreen extends Component {
             this.props.addMarker({
                 coordinate: this.state.newMarkers[0].coordinate,
                 name: this.state.name,
-                description: this.state.description
+                description: this.state.description,
+                isPublic: false
             })
         }
 

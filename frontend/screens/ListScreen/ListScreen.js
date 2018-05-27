@@ -16,9 +16,12 @@ class ListScreen extends Component {
     }
 
     spreadDataIntoState(data) {
-        let ownData = data.markers.filter(e => e.owned).concat(data.routes.filter(e => e.isOwn));
-        let publicMarkers = data.markers.filter(e => !e.owned);
-        let publicRoutes = data.routes.filter(e => !e.owned);
+        let ownData = data.markers.filter(e => e.ownerID == this.props.userID).concat(data.routes.filter(e => e.ownerID == this.props.userID));
+        let publicMarkers = data.markers.filter(e => e.ownerID != this.props.userID);
+        let publicRoutes = data.routes.filter(e => e.ownerID != this.props.userID);
+
+        console.log('OWN');
+        console.log(publicMarkers);
 
         this.setState(() => ({
             sections: [
@@ -86,7 +89,8 @@ const styles = StyleSheet.create({
 function mapStateToProps(state) {
     return {
         markers: state.markers,
-        routes: state.routes
+        routes: state.routes,
+        userID: state.userInfo.userID
     }
 }
 

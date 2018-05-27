@@ -18,7 +18,7 @@ function getHeaders() {
 export function fetchAddMarker(marker) {
     return fetch(api + "addMarker", {
         method: "POST",
-        body: JSON.stringify(Object.assign({}, marker, {userID: getUserID()})),
+        body: JSON.stringify(Object.assign({}, marker, {ownerID: getUserID()})),
         headers: getHeaders()
     }).then(res => res.json());
 }
