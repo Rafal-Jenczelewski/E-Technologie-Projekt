@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     ownedOnlyView: {
         flexDirection: 'row',
         justifyContent: 'center',
-        alignItems: 'flex-start',
+        alignItems: 'center',
         width: "100%"
     },
     fb: {
