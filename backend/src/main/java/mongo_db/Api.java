@@ -75,8 +75,9 @@ public class Api {
         }, gsonTransformer::toJson);
 
         put("/changeStatus", (req, res) -> {
-            Boolean isPublic = Boolean.valueOf(req.queryParams("isPublic"));
-            mongo.changeStatus((req.body()), isPublic);
+            System.out.println(req.body());
+            ChangeStatusReqBody body = gsonTransformer.fromJson(req.body(), ChangeStatusReqBody.class);
+            mongo.changeStatus(body.getId(), body.isPublic());
             return "";
         }, gsonTransformer::toJson);
     }
