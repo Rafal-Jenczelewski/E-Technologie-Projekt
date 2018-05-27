@@ -26,40 +26,6 @@ class MarkerView extends Component {
     }
 
     render() {
-        const styles = StyleSheet.create({
-            container: {
-                flexDirection: 'column',
-                justifyContent: 'space-between',
-                alignItems: 'flex-start',
-                borderColor: 'blue',
-                borderWidth: 2,
-                borderRadius: 5,
-                height: 80,
-                padding: 10,
-                flex: 1,
-                width: '90%',
-                marginLeft: 'auto',
-                marginRight: 'auto',
-                marginTop: 5,
-                marginBottom: 5
-            },
-            headerView: {
-                flexDirection: 'row',
-                justifyContent: 'space-between',
-                alignItems: 'flex-start',
-                width: '100%',
-            },
-            name: {
-                fontWeight: 'bold',
-                fontSize: 20
-            },
-            publicView: {
-                flexDirection: "row",
-                justifyContent: "flex-end",
-                width: "100%"
-            }
-        });
-
         let publicCheckbox = null;
 
         if (this.props.marker.ownerID == this.props.userID) {
@@ -68,15 +34,53 @@ class MarkerView extends Component {
                                                                                  onValueChange={this.onPublicChange}/></View>
         }
 
-        return <View
-            style={styles.container}>
-            <View style={styles.headerView}><TouchableHighlight onPress={this.onExpand}><Text
-                style={styles.name}>{this.props.marker.name}</Text></TouchableHighlight>
-            </View>
-            {publicCheckbox}
-        </View>
+        return <TouchableHighlight onPress={this.onExpand}>
+            <View style={styles.container}>
+                <View>
+                    <View style={styles.headerView}>
+                        <Text style={styles.name}>{this.props.marker.name}
+                        </Text>
+                    </View>
+                    {publicCheckbox}
+                </View>
+            </View></TouchableHighlight>
     }
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        alignItems: 'flex-start',
+        borderColor: 'blue',
+        borderWidth: 2,
+        borderRadius: 5,
+        height: 80,
+        padding: 10,
+        flex: 1,
+        width: '90%',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        marginTop: 5,
+        marginBottom: 5
+    },
+    headerView: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'flex-start',
+        width: '100%',
+    },
+    name: {
+        fontWeight: 'bold',
+        fontSize: 20
+    },
+    publicView: {
+        flexDirection: "row",
+        justifyContent: "flex-end",
+        alignItems: 'center',
+        width: "100%"
+    }
+});
 
 function mapStateToProps(state) {
     return {

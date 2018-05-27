@@ -51,6 +51,7 @@ class CommentsScreen extends Component {
             <Button onPress={() => this.props.navigation.navigate('List')} title={'Wróc'}/>
             <View style={styles.main}>
                 <Text style={styles.header}>{this.props.marker.name}</Text>
+                <View style={{borderBottomColor: 'lightblue', borderBottomWidth: 2}}/>
                 <Text>{this.props.marker.description}</Text>
                 <View>{coords}</View>
             </View>
