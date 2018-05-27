@@ -7,6 +7,10 @@ import {bindActionCreators} from 'redux'
 import {getMarkers, getRoutes} from '../../../shared/actions/actions'
 
 class Map extends Component {
+    state = {
+        flex: 0
+    };
+
     constructor(props) {
         super(props);
     }
@@ -14,19 +18,30 @@ class Map extends Component {
     componentDidMount() {
         this.props.getRoutes();
         this.props.getMarkers();
+
+        // setTimeout(() => this.forceUpdate(), 1000);
     }
 
     render() {
-        let markers = this.props.markers.map(m => (<Marker key={m.id} title={m.name} key={m.id} coordinate={m.coordinate}/>));
-        let routes = this.props.routes.map(m => (<Polyline key={m.id} coordinates={m.coordinates} strokeWidth={4} title={m.name}/>));
-        let routeMarkers = this.props.newRouteMarkers.map(m => (<Marker key={m.id} coordinate={m.coordinate} pinColor={'#0000FF'}/>));
-        return <View style={styles.container}><MapView style={styles.map}
+        let markers = this.props.markers.map(m => (
+            <Marker key={m.id} title={m.name} key={m.id} coordinate={m.coordinate}/>));
+        let routes = this.props.routes.map(m => (
+            <Polyline key={m.id} coordinates={m.coordinates} strokeWidth={4} title={m.name}/>));
+        let routeMarkers = this.props.newRouteMarkers.map(m => (
+            <Marker key={m.id} coordinate={m.coordinate} pinColor={'#0000FF'}/>));
+        return <View key={this.state.key} style={styles.container}><MapView
+            cacheEnabled={false} style={[styles.map, {flex: this.state.flex}]}
             initialRegion={{
                 latitude: 51.1078852,
                 longitude: 17.0385376,
                 latitudeDelta: 0.0922,
                 longitudeDelta: 0.0421,
-            }} onLongPress={this.props.onLongPress}>{markers}{routeMarkers}{routes}</MapView></View>
+            }} onLongPress={this.props.onLongPress}
+            showsMyLocationButton={true}
+            showsUserLocation={true}
+            followsUserLocation={true}
+            onMapReady={() => this.setState({flex: 1})}
+        >{markers}{routeMarkers}{routes}</MapView></View>
     }
 }
 
@@ -46,9 +61,8 @@ function mapDispatchToProps(dispatch) {
 
 const styles = StyleSheet.create({
     container: {
-        //...StyleSheet.absoluteFillObject,
         height: 400,
-        width: 400,
+        width: '100%',
         justifyContent: 'flex-end',
         alignItems: 'center',
     },
