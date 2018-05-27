@@ -5,9 +5,9 @@ class Inputs extends Component {
     render() {
         return <View style={styles.container}>
             <View style={styles.input}><Text>Nazwa:</Text>
-                <TextInput value={this.props.name} onChangeText={this.props.onNameChange}/></View>
+                <TextInput placeholder={"Nazwij swoja miejsce!"} value={this.props.name} onChangeText={this.props.onNameChange}/></View>
             <View style={styles.input}><Text>Opis:</Text>
-                <TextInput value={this.props.description} onChangetext={this.props.onDescChange}/></View>
+                <TextInput placeholder={"Opisz to miejsce!"} value={this.props.description} onChangetext={this.props.onDescChange}/></View>
             <Button title={"Zapisz"} onPress={this.props.onPress} disabled={this.props.buttonDisabled}/>
         </View>
     }
@@ -17,12 +17,14 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: 'column',
         justifyContent: 'space-between',
-        alignItems: 'flex-start'
+        alignItems: 'flex-start',
+        padding: 10
     },
     input: {
         flexDirection: 'column',
         justifyContent: 'flex-start',
-        alignItems: 'flex-start'
+        alignItems: 'flex-start',
+        width: '100%'
     }
 });
 

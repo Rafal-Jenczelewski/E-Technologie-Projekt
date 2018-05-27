@@ -93,7 +93,7 @@ class MapScreen extends Component {
         return <View style={styles.container}>
             <View><Map newRouteMarkers={this.state.newMarkers} onLongPress={this.addMarkerOnLongPress}/></View>
             <View style={styles.checkbox}><Text style={styles.text}>Tworzenie trasy</Text><CheckBox value={this.state.creatingRoute} onValueChange={this.toggleCreatingRoute}/>{routeButton}</View>
-            <View><Inputs buttonDisabled={buttonDisabled} name={this.state.name} description={this.state.description} onPress={this.onSubmit} onNameChange={this.onNameChange} onDescChange={this.onDescChange}/></View>
+            <View style={{width: '100%'}}><Inputs buttonDisabled={buttonDisabled} name={this.state.name} description={this.state.description} onPress={this.onSubmit} onNameChange={this.onNameChange} onDescChange={this.onDescChange}/></View>
         </View>
     }
 }
@@ -123,7 +123,8 @@ const styles = StyleSheet.create({
     checkbox: {
         flexDirection: 'row',
         justifyContent: 'flex-start',
-        alignItems: 'flex-start'
+        alignItems: 'center',
+        padding: 10
     },
 });
 

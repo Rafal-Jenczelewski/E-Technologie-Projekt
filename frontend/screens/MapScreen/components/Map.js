@@ -61,7 +61,7 @@ function mapDispatchToProps(dispatch) {
 
 const styles = StyleSheet.create({
     container: {
-        height: 400,
+        height: 300,
         width: '100%',
         justifyContent: 'flex-end',
         alignItems: 'center',

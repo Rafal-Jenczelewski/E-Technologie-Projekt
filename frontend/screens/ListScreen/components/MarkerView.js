@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {View, Text, StyleSheet, TouchableHighlight, CheckBox, ScrollView} from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
-import {changeIsPublic} from './requsts'
+import {changeIsPublic} from '../requsts'
 import {connect} from 'react-redux'
 
 class MarkerView extends Component {
@@ -33,6 +33,7 @@ class MarkerView extends Component {
                 alignItems: 'flex-start',
                 borderColor: 'blue',
                 borderWidth: 2,
+                borderRadius: 5,
                 height: 80,
                 padding: 10,
                 flex: 1,
