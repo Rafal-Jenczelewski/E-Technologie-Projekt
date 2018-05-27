@@ -1,17 +1,20 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {SectionList, View, Text, StyleSheet, PermissionsAndroid} from 'react-native'
-
 import MarkerView from './components/MarkerView'
 
 class ListScreen extends Component {
+    static navigationOptions = {
+        header: null
+    };
+
     constructor(props) {
         super(props);
 
         this.state = {
             sections: [],
         };
-        
+
         this.onExpandPress = this.onExpandPress.bind(this);
     }
 
@@ -19,9 +22,6 @@ class ListScreen extends Component {
         let ownData = data.markers.filter(e => e.ownerID == this.props.userID).concat(data.routes.filter(e => e.ownerID == this.props.userID));
         let publicMarkers = data.markers.filter(e => e.ownerID != this.props.userID);
         let publicRoutes = data.routes.filter(e => e.ownerID != this.props.userID);
-
-        console.log('OWN');
-        console.log(publicMarkers);
 
         this.setState(() => ({
             sections: [
@@ -33,12 +33,8 @@ class ListScreen extends Component {
         }))
     }
 
-    onExpandPress(id) {
-        this.setState(state => {
-            return {
-                expandedId: state.expandedId === id ? null : id
-            }
-        })
+    onExpandPress(marker) {
+        this.props.navigation.navigate('Details', {marker: marker});
     }
 
     componentDidMount() {
@@ -68,6 +64,7 @@ class ListScreen extends Component {
         return <View><SectionList sections={this.state.sections} renderSectionHeader={sectionHeader}
                                   renderItem={renderItemFunc}
                                   keyExtractor={keyExtractor} extraData={this.state}/></View>
+
     }
 }
 
@@ -76,9 +73,9 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#F5C3A0',
+        backgroundColor: 'lightblue',
         height: 30,
-        borderColor: '#282419'
+        borderColor: 'darkblue'
     },
     headerText: {
         fontWeight: 'bold',

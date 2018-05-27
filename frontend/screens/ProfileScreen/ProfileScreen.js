@@ -5,6 +5,8 @@ import {bindActionCreators} from 'redux'
 import {getRoutes, getMarkers} from '../../shared/actions/actions'
 import {resetUserInfo} from '../../shared/actions/actions'
 import {setGetOthers} from './actions'
+import {StackNavigator} from 'react-navigation'
+
 let {FBLogin} = require('react-native-facebook-login')
 
 class ProfileScreen extends Component {

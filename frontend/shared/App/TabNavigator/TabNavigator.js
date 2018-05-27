@@ -1,11 +1,11 @@
 import {TabNavigator} from 'react-navigation';
 import MapScreen from '../../../screens/MapScreen/MapScreen'
 import ProfileScreen from '../../../screens/ProfileScreen/ProfileScreen'
-import ListScreen from '../../../screens/ListScreen/ListScreen'
+import StackNav from '../../../screens/ListScreen/StackNavigator'
 
 export default TabNavigator({
         Mapa: MapScreen,
-        Lista: ListScreen,
+        Lista: StackNav,
         Ustawienia: ProfileScreen
     },
     {

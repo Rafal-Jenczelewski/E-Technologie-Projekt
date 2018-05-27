@@ -57,8 +57,9 @@ class MainComponent extends Component {
                      }}/>
         </View>;
 
-        if (this.props.userInfo !== null)
-            comp = <TabNavigator/>;
+        if (this.props.userInfo !== null) {
+            comp = <TabNavigator/>
+        }
 
         return comp;
     }
