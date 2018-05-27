@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import {View, Text, StyleSheet, TouchableHighlight, CheckBox,ScrollView} from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
+import {changeIsPublic} from './requsts'
+import {connect} from 'react-redux'
 
 class MarkerView extends Component {
     constructor(props) {
@@ -19,6 +21,7 @@ class MarkerView extends Component {
     }
 
     onPublicChange() {
+        changeIsPublic(this.props.marker.id, !this.state.isPublic);
         this.setState(state => ({isPublic: !state.isPublic}))
     }
 
@@ -28,17 +31,26 @@ class MarkerView extends Component {
                 flexDirection: 'column',
                 justifyContent: 'space-between',
                 alignItems: 'flex-start',
-                borderColor: '#0AA',
+                borderColor: '#8CA19C',
+                backgroundColor: '#F5C3A0',
                 borderWidth: 2,
                 height: this.props.expanded ? 250 : 100,
-                padding: 10
+                padding: 10,
+                flex: 1,
+                width: '100%',
+                marginTop: 5,
+                marginBottom: 5
             },
             headerView: {
                 flexDirection: 'row',
                 justifyContent: 'space-between',
                 alignItems: 'flex-start',
                 height: 50,
-                width: '100%'
+                width: '100%',
+            },
+            name: {
+                fontWeight: 'bold',
+                fontSize: 20
             },
             descView: {
                 height: 50
@@ -59,7 +71,7 @@ class MarkerView extends Component {
         let coordsView = null;
         let publicCheckbox = null;
 
-        if (this.props.owned) {
+        if (this.props.marker.ownerID === this.props.userID) {
             publicCheckbox = <View style={styles.publicView}><Text>Publiczny:</Text><CheckBox value={this.state.isPublic} onValueChange={this.onPublicChange} /></View>
         }
 
@@ -73,7 +85,7 @@ class MarkerView extends Component {
 
         return <View
             style={styles.container}>
-            <View style={styles.headerView}><Text>{this.props.marker.name}</Text>
+            <View style={styles.headerView}><Text style={styles.name}>{this.props.marker.name}</Text>
                 <TouchableHighlight onPress={this.onExpand}><Icon name={"expand"}/></TouchableHighlight>
             </View>
             {moreInfo}
@@ -83,6 +95,10 @@ class MarkerView extends Component {
     }
 }
 
+function mapStateToProps(state) {
+    return {
+        userID: state.userInfo.userID
+    }
+}
 
-
-export default MarkerView
+export default connect(mapStateToProps, null)(MarkerView);

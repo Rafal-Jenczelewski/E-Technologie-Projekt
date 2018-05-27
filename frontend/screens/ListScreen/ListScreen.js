@@ -54,7 +54,7 @@ class ListScreen extends Component {
 
     render() {
         let renderItemFunc = ({item, index}) => (
-            <MarkerView owned={item.owned} isPublic={item.isPublic} marker={item} onExpand={this.onExpandPress}
+            <MarkerView isPublic={item.isPublic} marker={item} onExpand={this.onExpandPress}
                         expanded={this.state.expandedId === item.id}/>);
 
         let sectionHeader = (info) => (
@@ -73,10 +73,9 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#1AF',
+        backgroundColor: '#F5C3A0',
         height: 30,
-        borderColor: '#000',
-        borderWidth: 5
+        borderColor: '#282419'
     },
     headerText: {
         fontWeight: 'bold',

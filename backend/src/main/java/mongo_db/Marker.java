@@ -9,7 +9,7 @@ public class Marker {
     @Id
     private String id;
     private String name;
-    private Boolean owned;
+    private Long ownerID;
     private String description;
     private Boolean isPublic;
     private Coordinates coordinate;
@@ -17,13 +17,13 @@ public class Marker {
     //For GSON
     public Marker(){}
 
-    public Marker(Double longitude, Double latitude, String name, Boolean owned, String description, Boolean isPublic) {
+    public Marker(Double longitude, Double latitude, String name, String description, Boolean isPublic, Long ownerID) {
         super();
         coordinate = new Coordinates(latitude, longitude);
         this.name = name;
-        this.owned = owned;
         this.description = description;
         this.isPublic = isPublic;
+        this.ownerID = ownerID;
     }
 
     public String getId() {
@@ -40,14 +40,6 @@ public class Marker {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Boolean getOwned() {
-        return owned;
-    }
-
-    public void setOwned(Boolean owned) {
-        this.owned = owned;
     }
 
     public String getDescription() {
@@ -72,5 +64,13 @@ public class Marker {
 
     public void setCoordinate(Coordinates coordinate) {
         this.coordinate = coordinate;
+    }
+
+    public Long getOwnerID() {
+        return ownerID;
+    }
+
+    public void setOwnerID(Long ownerID) {
+        this.ownerID = ownerID;
     }
 }

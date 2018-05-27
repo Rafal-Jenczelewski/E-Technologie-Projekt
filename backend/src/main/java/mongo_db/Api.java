@@ -14,27 +14,27 @@ public class Api {
         post("/addSomeData", (req, res) -> {
             mongo.clear();
 
-            Marker marker = new Marker(51.1222822, 17.060590, "marker_test_0", true, "opis_0", true);
+            Marker marker = new Marker(51.1222822, 17.060590, "Nice place!", "opis_0", true, 1L);
             mongo.addMarker(marker);
 
-            marker = new Marker(51.1845689, 51.1845689, "marker_test_1", false, "opis_1", false);
+            marker = new Marker(51.1845689, 51.1845689, "Big tree!", "opis_1", false, 1L);
             mongo.addMarker(marker);
 
-            marker = new Marker(51.18415689, 17.0545594, "marker_test_2", false, "opis_2", false);
+            marker = new Marker(51.18415689, 17.0545594, "I like this!", "opis_2", false, 1L);
             mongo.addMarker(marker);
 
-            marker = new Marker(51.18145689, 17.0514594, "marker_test_3", true, "opis_3", false);
+            marker = new Marker(51.18145689, 17.0514594, "Best shop on Citadel!", "opis_3", false, 1L);
             mongo.addMarker(marker);
 
-            marker = new Marker(51.18172689, 17.0514524, "marker_test_", true, "opis_4", false);
+            marker = new Marker(51.18172689, 17.0514524, "Come here", "opis_4", false, 1L);
             mongo.addMarker(marker);
 
             Coordinates[] temp = {new Coordinates(51.18112689, 17.0511524), new Coordinates(51.18472689, 17.0714524)};
-            Route route = new Route(temp, "trasa_test_0", true, "opis_0", false);
+            Route route = new Route(temp, "That's amazing!", "opis_0", false,1L);
             mongo.addRoute(route);
 
             Coordinates[] temp1 = {new Coordinates(51.14112689, 17.0141524), new Coordinates(51.18485689, 17.0772524)};
-            route = new Route(temp1, "trasa_test_1", true, "opis_1", false);
+            route = new Route(temp1, "Nice walk!", "opis_1", false, 1L);
             mongo.addRoute(route);
 
             return "example data added";
@@ -76,7 +76,7 @@ public class Api {
 
         put("/changeStatus", (req, res) -> {
             Boolean isPublic = Boolean.valueOf(req.queryParams("isPublic"));
-            mongo.changeStatus((req.body().toString()), isPublic);
+            mongo.changeStatus((req.body()), isPublic);
             return "";
         }, gsonTransformer::toJson);
     }

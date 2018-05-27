@@ -1,6 +1,5 @@
 package mongo_db;
 
-
 import org.mongodb.morphia.Datastore;
 import org.mongodb.morphia.Morphia;
 
@@ -8,6 +7,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import com.mongodb.MongoClient;
+import org.mongodb.morphia.query.Query;
+import org.mongodb.morphia.query.UpdateOperations;
 
 
 public class MongoService {
@@ -46,41 +47,38 @@ public class MongoService {
     }
 
     public List<Marker> getMarkers(boolean isGetNotOwned) {
-        if (isGetNotOwned)
-            return getAllMarkers();
-
-        List<Marker> list = datastore.find(Marker.class).asList();
-
-        if (list != null) {
-            return list.stream()
-                    .filter(p -> p.getOwned().equals(isGetNotOwned))
-                    .collect(Collectors.toList());
-        }
+//        if (isGetNotOwned)
+//            return getAllMarkers();
+//
+//        List<Marker> list = datastore.find(Marker.class).asList();
+//
+//        if (list != null) {
+//            return list.stream()
+//                    .filter(p -> p.getOwned().equals(isGetNotOwned))
+//                    .collect(Collectors.toList());
+//        }
 
         return null;
     }
 
     public List<Route> getRoutes(boolean isGetNotOwned) {
-        if (isGetNotOwned)
-            return getAllRoutes();
-
-        List<Route> list = datastore.find(Route.class).asList();
-        if (list != null) {
-                return list.stream()
-                        .filter(p -> p.getOwned().equals(!isGetNotOwned))
-                        .collect(Collectors.toList());
-        }
+//        if (isGetNotOwned)
+//            return getAllRoutes();
+//
+//        List<Route> list = datastore.find(Route.class).asList();
+//        if (list != null) {
+//                return list.stream()
+//                        .filter(p -> p.getOwned().equals(!isGetNotOwned))
+//                        .collect(Collectors.toList());
+//        }
         return null;
     }
 
     public void changeStatus(String id, Boolean isPublic) {
-        List<Marker> list = datastore.find(Marker.class).asList();
-        if (list != null) {
-            Marker a = list.stream()
-                    .filter(p -> p.getId().equals(id))
-                    .findFirst().get();
-            //TODO update
-        }
+        Query<Marker> query = datastore.createQuery(Marker.class).field("ownerID").equal(id);
+        UpdateOperations<Marker> ops = datastore.createUpdateOperations(Marker.class).set("isPublic", isPublic.toString());
+
+        datastore.update(query, ops);
     }
 
 
