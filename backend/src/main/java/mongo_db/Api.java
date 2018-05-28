@@ -3,13 +3,32 @@ package mongo_db;
 import static spark.Spark.*;
 
 import com.google.gson.Gson;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class Api {
 
     private static MongoService mongo = new MongoService();
     private static Gson gsonTransformer = new Gson();
 
+
+    public static boolean verify(String token){
+        AtomicBoolean isVerified = new AtomicBoolean(false);
+        get("graph.facebook.com/debug_token?input_token={\"+token+\"}&access_token={1661504553926840}", (req, res) -> {
+            res.type("application/json");
+            if(res.body().contains("error")) isVerified.set(false);
+            else isVerified.set(true);
+            return res;
+        }, gsonTransformer::toJson);
+        return isVerified.get();
+    }
+
+
+
+
+
     public static void main(String[] args) {
+
+
 
         post("/addSomeData", (req, res) -> {
             mongo.clear();
@@ -41,21 +60,40 @@ public class Api {
         }, gsonTransformer::toJson);
 
         post("/addMarker", (req, res) -> {
-            res.type("application/json");
-            Marker marker = gsonTransformer.fromJson(req.body(), Marker.class);
-            return mongo.addMarker(marker);
+            if(verify(req.queryParams("ACCESS-TOKEN"))) {
+                res.type("application/json");
+                Marker marker = gsonTransformer.fromJson(req.body(), Marker.class);
+                return mongo.addMarker(marker);
+            } else {
+                return "error-wrong-token";
+            }
         }, gsonTransformer::toJson);
 
         post("/addRoute", (req, res) -> {
+            if(verify(req.queryParams("ACCESS-TOKEN"))) {
             res.type("application/json");
             Route route = gsonTransformer.fromJson(req.body(), Route.class);
             return mongo.addRoute(route);
+            } else {
+                return "error-wrong-token";
+            }
+        }, gsonTransformer::toJson);
+
+        post("/addComment", (req, res) -> {
+            if(verify(req.queryParams("ACCESS-TOKEN"))) {
+                res.type("application/json");
+                Comment comment = gsonTransformer.fromJson(req.body(), Comment.class);
+                return mongo.addComment(comment);
+            } else {
+                return "error-wrong-token";
+            }
         }, gsonTransformer::toJson);
 
         get("/getAllMarkers", (req, res) -> {
             res.type("application/json");
             return mongo.getAllMarkers();
         }, gsonTransformer::toJson);
+
 
         get("/getAllRoutes", (req, res) -> {
             res.type("application/json");
@@ -70,6 +108,13 @@ public class Api {
             res.type("application/json");
 
             return mongo.getMarkers(owned, userID);
+        }, gsonTransformer::toJson);
+
+        get("/getComments", (req, res) -> {
+            System.out.println(req.queryParams("markerId"));
+            String markerId =  gsonTransformer.fromJson(req.body(), String.class);
+            res.type("application/json");
+            return mongo.getComments(markerId);
         }, gsonTransformer::toJson);
 
         get("/getRoutes", (req, res) -> {

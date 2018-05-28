@@ -14,6 +14,7 @@ public class Marker {
     private Boolean isPublic;
     private Coordinates coordinate;
 
+
     //For GSON
     public Marker(){}
 

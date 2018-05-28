@@ -18,6 +18,7 @@ public class MongoService {
     public void clear() {
         datastore.getCollection(Marker.class).drop();
         datastore.getCollection(Route.class).drop();
+        datastore.getCollection(Comment.class).drop();
     }
 
     public String addMarker(Marker marker) {
@@ -28,6 +29,11 @@ public class MongoService {
     public String addRoute(Route route) {
         datastore.save(route);
         return route.getId();
+    }
+
+    public String addComment(Comment comment) {
+        datastore.save(comment);
+        return comment.getId();
     }
 
     public List<Marker> getAllMarkers() {
@@ -60,6 +66,16 @@ public class MongoService {
         System.out.println(list.size());
         return list;
     }
+
+    public List<Comment> getComments(String markerId){
+        List<Comment> list = null;
+
+        list.addAll(datastore.createQuery(Comment.class).field("markerId").equal(markerId).asList());
+        return list;
+    }
+
+
+
 
     public List<Route> getRoutes(boolean isGetNotOwned, Long userID) {
         List<Route> list = null;
