@@ -5,7 +5,6 @@ import {bindActionCreators} from 'redux'
 import {getRoutes, getMarkers} from '../../actions/actions'
 import {resetUserInfo} from '../../actions/actions'
 import {setGetOthers} from './actions/actions'
-import {StackNavigator} from 'react-navigation'
 
 let {FBLogin} = require('react-native-facebook-login')
 
@@ -33,6 +32,7 @@ class ProfileScreen extends Component {
 
     render() {
         return <View fits style={styles.container}>
+            <View style={styles.header}><Text>Zalogowany jako: {this.props.name}</Text></View>
             <View style={styles.ownedOnlyView}><Text>Pobierz obiekty innych użytkowników:</Text>
                 <CheckBox value={this.props.getOthers} onValueChange={this.onOwnedOnlyChange}/></View>
             <Button title={"Odśwież"} onPress={this.onRefreshClick}/>
@@ -47,8 +47,11 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'column',
         backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
+        alignItems: 'space-between',
+        justifyContent: 'flex-start',
+    },
+    header: {
+
     },
     ownedOnlyView: {
         flexDirection: 'row',
@@ -64,7 +67,8 @@ const styles = StyleSheet.create({
 
 function mapStateToProps(state) {
     return {
-        getOthers: state.getOthers
+        getOthers: state.getOthers,
+        name: state.userInfo.name
     }
 }
 
