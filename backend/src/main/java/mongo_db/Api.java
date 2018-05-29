@@ -36,7 +36,7 @@ public class Api
     private static CloseableHttpClient httpClient = HttpClients.createDefault();
 
 
-    public static boolean verify( String token )
+    private static boolean verify( String token )
     {
         HttpGet getRequest = new HttpGet( buildVerifyURL( token ) );
         try
@@ -64,6 +64,16 @@ public class Api
     public static void main( String[] args )
     {
 
+        setUpPostRequests();
+
+        setUpGetRequsts();
+
+        setUpPutRequests();
+    }
+
+
+    private static void setUpPostRequests()
+    {
         post( "/addSomeData", ( req, res ) -> {
             mongo.clear();
 
@@ -113,7 +123,11 @@ public class Api
                 return "User is not logged in.";
             }
         }, gsonTransformer::toJson );
+    }
 
+
+    private static void setUpGetRequsts()
+    {
         get( "/getAllMarkers", ( req, res ) -> {
             res.type( "application/json" );
             return mongo.getAllMarkers();
@@ -148,7 +162,11 @@ public class Api
 
             return mongo.getRoutes( owned, userID );
         }, gsonTransformer::toJson );
+    }
 
+
+    private static void setUpPutRequests()
+    {
         put( "/changeStatus", ( req, res ) -> {
             System.out.println( req.body() );
             ChangeStatusReqBody body =
@@ -161,25 +179,31 @@ public class Api
 
     private static void loadExampleData()
     {
-        Marker marker = new Marker( 51.1222822, 17.060590, "Nice place!", "My favourite spot for relax.", true, 1L );
+        Marker marker = new Marker( 51.1222822, 17.060590, "Nice place!",
+                        "My favourite spot for relax.", true, 1L );
         mongo.addMarker( marker );
 
-        marker = new Marker( 51.1845689, 51.1845689, "Big tree!", "Seriously, this big is freaking big.", false, 1L );
+        marker = new Marker( 51.1845689, 51.1845689, "Big tree!",
+                        "Seriously, this big is freaking big.", false, 1L );
         mongo.addMarker( marker );
 
-        marker = new Marker( 51.18415689, 17.0545594, "I like this!", "Best place for quick walk.", true, 1L );
+        marker = new Marker( 51.18415689, 17.0545594, "I like this!", "Best place for quick walk.",
+                        true, 1L );
         mongo.addMarker( marker );
 
-        marker = new Marker( 51.18145689, 17.0514594, "Best shop on Citadel!", "I'm commander Shepard and this is my favourite shop on Citadel", true,
+        marker = new Marker( 51.18145689, 17.0514594, "Best shop on Citadel!",
+                        "I'm commander Shepard and this is my favourite shop on Citadel", true,
                         1L );
         mongo.addMarker( marker );
 
-        marker = new Marker( 51.18172689, 17.0514524, "Come here", "Eveyone, you need to see this!", false, 1L );
+        marker = new Marker( 51.18172689, 17.0514524, "Come here", "Eveyone, you need to see this!",
+                        false, 1L );
         mongo.addMarker( marker );
 
         Coordinates[] temp = { new Coordinates( 51.18112689, 17.0511524 ),
                                new Coordinates( 51.18472689, 17.0714524 ) };
-        Route route = new Route( temp, "That's amazing!", "In need of walk with nice views? Come here!", false, 1L );
+        Route route = new Route( temp, "That's amazing!",
+                        "In need of walk with nice views? Come here!", false, 1L );
         mongo.addRoute( route );
 
         Coordinates[] temp1 = { new Coordinates( 51.14112689, 17.0141524 ),
