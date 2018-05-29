@@ -140,7 +140,7 @@ public class Api
         }, gsonTransformer::toJson );
 
         get( "/getComments", ( req, res ) -> {
-            String markerId = gsonTransformer.fromJson( req.body(), String.class );
+            String markerId = req.queryParams( "objectId" );
             res.type( "application/json" );
             return mongo.getComments( markerId );
         }, gsonTransformer::toJson );
