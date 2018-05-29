@@ -81,7 +81,7 @@ public class Api
             System.out.println( "Received a request: " + req.url() );
         } );
         before( "(add|change)*", ( req, res ) -> {
-            if( !verify( req.headers( "ACCESS_TOKEN" ) ) )
+            if( !verify( req.headers( "ACCESS-TOKEN" ) ) )
             {
                 halt( 401, "User is not logged in." );
             }
