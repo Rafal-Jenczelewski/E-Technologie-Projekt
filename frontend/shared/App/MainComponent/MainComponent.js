@@ -16,8 +16,8 @@ class MainComponent extends Component {
     }
 
     onLogin(data) {
-        //TODO: user name w creditionals - zmienic tez w commentScreen
-        let {userId, token, name} = data.credentials;
+        let {userId, token} = data.credentials;
+        let name = data.profile.first_name + " " + data.profile.last_name;
         let info = {
             userID: userId,
             token,
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
         display: 'flex'
     },
     btn: {
-        height: 50,
+        height: 40,
         borderRadius: 5
     }
 });

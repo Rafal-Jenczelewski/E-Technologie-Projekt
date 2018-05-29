@@ -32,12 +32,14 @@ class ProfileScreen extends Component {
 
     render() {
         return <View fits style={styles.container}>
-            <View style={styles.header}><Text>Zalogowany jako: {this.props.name}</Text></View>
-            <View style={styles.ownedOnlyView}><Text>Pobierz obiekty innych użytkowników:</Text>
+            <View style={styles.header}>
+                <Text style={styles.headerText}>Logged as: {this.props.name}</Text>
+                <FBLogin containerStyle={styles.fb}
+                         onLogout={this.onLogout}/>
+            </View>
+            <View style={styles.ownedOnlyView}><Text>Get others objects</Text>
                 <CheckBox value={this.props.getOthers} onValueChange={this.onOwnedOnlyChange}/></View>
-            <Button title={"Odśwież"} onPress={this.onRefreshClick}/>
-            <FBLogin containerStyle={styles.fb}
-                     onLogout={this.onLogout}/>
+            <Button title={"Refresh"} onPress={this.onRefreshClick}/>
         </View>
     }
 }
@@ -47,11 +49,18 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'column',
         backgroundColor: '#fff',
-        alignItems: 'space-between',
-        justifyContent: 'flex-start',
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     header: {
-
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    headerText: {
+        fontSize: 15,
+        fontWeight: 'bold'
     },
     ownedOnlyView: {
         flexDirection: 'row',
@@ -60,7 +69,7 @@ const styles = StyleSheet.create({
         width: "100%"
     },
     fb: {
-        height: 50,
+        height: 40,
         margin: 5
     }
 });

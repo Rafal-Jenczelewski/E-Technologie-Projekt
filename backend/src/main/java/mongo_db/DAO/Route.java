@@ -1,12 +1,13 @@
 package mongo_db.DAO;
 
+import org.bson.types.ObjectId;
 import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Id;
 
 @Entity
 public class Route {
     @Id
-    private String id;
+    private ObjectId id;
     private String name;
     private Long ownerID;
     private String description;
@@ -30,7 +31,7 @@ public class Route {
         return id.toString();
     }
 
-    public void setId(String id) {
+    public void setId(ObjectId id) {
         this.id = id;
     }
 

@@ -88,11 +88,11 @@ class MapScreen extends Component {
         let buttonDisabled = !(this.state.name !== "" && this.state.newMarkers.length > 0);
         let routeButton = null;
         if (this.state.creatingRoute)
-            routeButton = <Button title={"Usuń ostatni"} onPress={this.onDeleteLast}/>;
+            routeButton = <Button title={"Delete last"} onPress={this.onDeleteLast}/>;
 
         return <View style={styles.container}>
             <View><Map newRouteMarkers={this.state.newMarkers} onLongPress={this.addMarkerOnLongPress}/></View>
-            <View style={styles.checkbox}><Text style={styles.text}>Tworzenie trasy</Text><CheckBox value={this.state.creatingRoute} onValueChange={this.toggleCreatingRoute}/>{routeButton}</View>
+            <View style={styles.checkbox}><Text style={styles.text}>Creating route</Text><CheckBox value={this.state.creatingRoute} onValueChange={this.toggleCreatingRoute}/>{routeButton}</View>
             <View style={{width: '100%'}}><Inputs buttonDisabled={buttonDisabled} name={this.state.name} description={this.state.description} onPress={this.onSubmit} onNameChange={this.onNameChange} onDescChange={this.onDescChange}/></View>
         </View>
     }

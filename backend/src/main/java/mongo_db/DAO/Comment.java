@@ -4,8 +4,12 @@
 
 package mongo_db.DAO;
 
+import org.mongodb.morphia.annotations.Entity;
+
+@Entity
 public class Comment
 {
+    @org.mongodb.morphia.annotations.Id
     private String Id;
     private String targetId;
     private String authorName;

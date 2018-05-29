@@ -4,20 +4,23 @@
 
 package mongo_db.FacebookLogin;
 
-public class FacebookVerifyResponseBody
-{
-    private boolean is_valid;
+public class FacebookVerifyResponseBody {
+    private FacebookVerifyResponseBodyData data;
 
-    public FacebookVerifyResponseBody(){};
-
-    public boolean isIs_valid()
-    {
-        return is_valid;
+    public FacebookVerifyResponseBody() {
     }
 
+    ;
 
-    public void setIs_valid( boolean is_valid )
-    {
-        this.is_valid = is_valid;
+    public FacebookVerifyResponseBodyData getData() {
+        return data;
+    }
+
+    public void setData(FacebookVerifyResponseBodyData data) {
+        this.data = data;
+    }
+
+    public boolean isValid() {
+        return data.isIs_valid();
     }
 }

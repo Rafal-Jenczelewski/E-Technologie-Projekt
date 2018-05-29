@@ -2,7 +2,7 @@ const api = "http://10.0.2.2:4567/";
 import store from '../../../store/store'
 
 function getUserToken() {
-    return store.getState().userInfo.userInfo;
+    return store.getState().userInfo.token;
 }
 
 function getUserID() {
@@ -15,7 +15,7 @@ function getUserName() {
 
 function getHeaders() {
     return {
-        'USER_TOKEN': getUserToken()
+        'ACCESS-TOKEN': getUserToken()
     };
 }
 
@@ -32,28 +32,28 @@ export function changeIsPublic(id, isPublic) {
 }
 
 export function getComments(id) {
-    // return fetch(api + '/getComments?id=' + id)
-    //     .then(res => res.json());
+    return fetch(api + 'getComments?objectId=' + id)
+        .then(res => res.json());
 
-    return Promise.resolve([
-        {
-            id: 1,
-            author: "Rafał Jenczelewski",
-            content: "Wow, that's really cool, 5/5"
-        },
-        {
-            id: 2,
-            author: "Jadwiga Raczko",
-            content: "Nah, not worth it"
-        }
-    ])
+    // return Promise.resolve([
+    //     {
+    //         id: 1,
+    //         author: "Rafał Jenczelewski",
+    //         content: "Wow, that's really cool, 5/5"
+    //     },
+    //     {
+    //         id: 2,
+    //         author: "Jadwiga Raczko",
+    //         content: "Nah, not worth it"
+    //     }
+    // ])
 }
 
 export function fetchAddComment(comment) {
-    return fetch(api + "/addComment", {
+    return fetch(api + "addComment", {
         method: 'post',
         body: JSON.stringify(Object.assign({}, comment, {
-            authorId: getUserName()
+            authorName: getUserName(),
         })),
         headers: getHeaders()
     })

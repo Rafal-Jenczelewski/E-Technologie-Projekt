@@ -21,13 +21,13 @@ class CommentsScreen extends Component {
     }
 
     inputChange(e) {
-        this.setState({comment: e.target.value});
+        this.setState({comment: e});
     }
 
     async fetchComments() {
         let coms = await getComments(this.props.marker.id);
         this.setState({
-            comments: coms
+            comments: coms.map(e => Object.assign({}, {key: e.id}, e))
         })
     }
 
@@ -49,23 +49,24 @@ class CommentsScreen extends Component {
         coords = coords.map(e => <Text key={e.latitude + e.longitude}>Lat: {e.latitude} Long: {e.longitude}</Text>);
 
         return <View style={styles.container}>
-            <Button onPress={() => this.props.navigation.navigate('List')} title={'Wróc'}/>
+            <Button onPress={() => this.props.navigation.navigate('List')} title={'Back'}/>
             <View style={styles.main}>
                 <Text style={styles.header}>{this.props.marker.name}</Text>
                 <View style={{borderBottomColor: 'lightblue', borderBottomWidth: 2}}/>
-                <Text>{this.props.marker.description}</Text>
+                <Text style={styles.biggerText}>{this.props.marker.description}</Text>
                 <View>{coords}</View>
             </View>
             <View style={styles.commentInput}>
-                <TextInput placeholder={"Tell others what you think..."} onChange={this.inputChange}/>
-                <Button onPress={this.onSubmit}>Comment</Button>
+                <TextInput placeholder={"Tell others what you think..."} onChangeText={this.inputChange} value={this.state.comment}/>
+                <Button onPress={this.onSubmit} title={'Comment'}/>
             </View>
             <FlatList style={styles.list}
                       data={this.state.comments}
+                      keyExtractor={(item) => item.id}
                       renderItem={({item}) => <View key={item.id} style={styles.comment}>
-                          <Text style={styles.header}>{item.author}</Text>
+                          <Text style={styles.header}>{item.authorName}</Text>
                           <View style={{borderBottomColor: 'lightblue', borderBottomWidth: 2}}/>
-                          <Text>{item.content}</Text>
+                          <Text style={styles.biggerText}>{item.content}</Text>
                       </View>}/>
         </View>
     }
@@ -87,6 +88,9 @@ const styles = StyleSheet.create({
         width: '95%',
         marginRight: 'auto',
         marginLeft: 'auto',
+    },
+    biggerText: {
+        fontSize: 15
     },
     main: {
         marginTop: 10,

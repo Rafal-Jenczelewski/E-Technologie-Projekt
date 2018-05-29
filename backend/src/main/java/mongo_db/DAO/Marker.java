@@ -1,5 +1,6 @@
 package mongo_db.DAO;
 
+import org.bson.types.ObjectId;
 import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Id;
 
@@ -7,7 +8,7 @@ import org.mongodb.morphia.annotations.Id;
 public class Marker {
 
     @Id
-    private String id;
+    private ObjectId id;
     private String name;
     private Long ownerID;
     private String description;
@@ -28,10 +29,10 @@ public class Marker {
     }
 
     public String getId() {
-        return id.toString();
+        return id.toHexString();
     }
 
-    public void setId(String id) {
+    public void setId(ObjectId id) {
         this.id = id;
     }
 

@@ -7,6 +7,7 @@ import org.bson.types.ObjectId;
 import org.mongodb.morphia.Datastore;
 import org.mongodb.morphia.Morphia;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.mongodb.MongoClient;
@@ -74,36 +75,30 @@ public class MongoService
 
     public List<Marker> getMarkers( boolean isGetNotOwned, Long userID )
     {
-        List<Marker> list = null;
+        List<Marker> list = new ArrayList<>();
 
-        System.out.println( "Markers" );
         if( isGetNotOwned )
         {
-            System.out.println( "get others" );
             list = datastore.createQuery( Marker.class ).field( "ownerID" ).notEqual( userID )
                             .field( "isPublic" ).equal( Boolean.TRUE ).asList();
-            System.out.println( list.size() );
         }
         list.addAll( datastore.createQuery( Marker.class ).field( "ownerID" ).equal( userID )
                         .asList() );
-        System.out.println( list.size() );
+
         return list;
     }
 
 
     public List<Comment> getComments( String targetId )
     {
-        List<Comment> list = null;
-
-        list.addAll( datastore.createQuery( Comment.class ).field( "targetId" ).equal( new ObjectId( targetId ) )
-                        .asList() );
-        return list;
+        return datastore.createQuery( Comment.class ).field( "targetId" ).equal( targetId  )
+                        .asList();
     }
 
 
     public List<Route> getRoutes( boolean isGetNotOwned, Long userID )
     {
-        List<Route> list = null;
+        List<Route> list = new ArrayList<>();
 
         if( isGetNotOwned )
         {
@@ -120,11 +115,11 @@ public class MongoService
     public void changeStatus( String id, Boolean isPublic )
     {
         Query<Marker> query = datastore.createQuery( Marker.class ).field( "_id" )
-                        .equal( new ObjectId( id ) );
+                        .equal( new ObjectId(id) );
         UpdateOperations<Marker> ops = datastore.createUpdateOperations( Marker.class )
                         .set( "isPublic", isPublic );
 
-        System.out.println( datastore.update( query, ops ).getUpdatedCount() );
+        datastore.update( query, ops ).getUpdatedCount();
     }
 
 }

@@ -30,7 +30,7 @@ class MarkerView extends Component {
 
         if (this.props.marker.ownerID == this.props.userID) {
             publicCheckbox =
-                <View style={styles.publicView}><Text>Publiczny:</Text><CheckBox value={this.state.isPublic}
+                <View style={styles.publicView}><Text>Is public:</Text><CheckBox value={this.state.isPublic}
                                                                                  onValueChange={this.onPublicChange}/></View>
         }
 

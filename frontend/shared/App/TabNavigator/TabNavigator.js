@@ -4,9 +4,9 @@ import ProfileScreen from '../../screens/ProfileScreen/ProfileScreen'
 import StackNav from '../../screens/ListScreen/StackNavigator'
 
 export default TabNavigator({
-        Mapa: MapScreen,
-        Lista: StackNav,
-        Ustawienia: ProfileScreen
+        Map: MapScreen,
+        List: StackNav,
+        Profile: ProfileScreen
     },
     {
         tabBarOptions: {

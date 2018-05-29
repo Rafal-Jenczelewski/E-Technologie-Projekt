@@ -6,7 +6,6 @@ import MainComponent from './MainComponent/MainComponent'
 
 export default class App extends React.Component {
     render() {
-        console.log(this.props);
         return <Provider store={store}><MainComponent/></Provider>
     }
 }

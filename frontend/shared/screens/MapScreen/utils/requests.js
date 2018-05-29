@@ -2,7 +2,7 @@ const api = "http://10.0.2.2:4567/";
 import store from '../../../store/store'
 
 function getUserToken() {
-    return store.getState().userInfo.userInfo;
+    return store.getState().userInfo.token;
 }
 
 function getUserID() {
@@ -11,7 +11,7 @@ function getUserID() {
 
 function getHeaders() {
     return {
-        'USER_TOKEN': getUserToken()
+        'ACCESS-TOKEN': getUserToken()
     };
 }
 

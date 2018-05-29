@@ -5,24 +5,25 @@ import static spark.Spark.*;
 import com.google.gson.Gson;
 import mongo_db.DAO.*;
 import mongo_db.FacebookLogin.FacebookAuth;
+import spark.Request;
 
 
 public class Api
 {
-    private static MongoService mongo;// = new MongoService();
+    private static MongoService mongo = new MongoService();
     private static Gson gsonTransformer = new Gson();
 
     public static void main( String[] args )
     {
         FacebookAuth.getAccessToken();
 
-        setUpFilters();
-
         setUpPostRequests();
 
         setUpGetRequests();
 
         setUpPutRequests();
+
+        setUpFilters();
 
         System.out.println( "Server is running..." );
     }
@@ -32,20 +33,27 @@ public class Api
     {
         before( ( req, res ) -> {
             System.out.println( "Received a request: " + req.url() );
-        } );
-        before( "/*", ( req, res ) -> {
-            System.out.println("Verifing...");
-            if( !FacebookAuth.verify( req.headers( "ACCESS-TOKEN" ) ) )
+            if (isProtected(req))
             {
-                halt( 401, "User is not logged in." );
+                System.out.println("Verifing...");
+                if( !FacebookAuth.verify( req.headers( "ACCESS-TOKEN" ) ) )
+                {
+                    halt( 401, "User is not logged in." );
+                }
             }
+
         } );
     }
 
+    private static boolean isProtected(Request req)
+    {
+        String method = req.requestMethod().toLowerCase();
+        return method.equals("post") || method.equals("put");
+    }
 
     private static void setUpPostRequests()
     {
-        post( "/addSomeData", ( req, res ) -> {
+        get( "/addSomeData", ( req, res ) -> {
             mongo.clear();
 
             loadExampleData();
@@ -114,7 +122,7 @@ public class Api
         put( "/changeStatus", ( req, res ) -> {
             ChangeStatusReqBody body =
                             gsonTransformer.fromJson( req.body(), ChangeStatusReqBody.class );
-            mongo.changeStatus( body.getId(), body.isPublic() );
+            mongo.changeStatus( body.getId().toString(), body.isPublic() );
             return "";
         }, gsonTransformer::toJson );
     }

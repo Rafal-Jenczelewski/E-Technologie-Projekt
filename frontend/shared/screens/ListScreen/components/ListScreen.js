@@ -25,9 +25,9 @@ class ListScreen extends Component {
 
         this.setState(() => ({
             sections: [
-                {title: "Moje", data: ownData},
-                {title: "Znaczniki", data: publicMarkers},
-                {title: "Trasy", data: publicRoutes}
+                {title: "My", data: ownData},
+                {title: "Markers", data: publicMarkers},
+                {title: "Routes", data: publicRoutes}
             ],
             expandedId: null
         }))

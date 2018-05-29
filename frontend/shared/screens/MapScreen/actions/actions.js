@@ -3,12 +3,13 @@ import {fetchAddMarker, fetchAddRoute} from '../utils/requests'
 
 export function addMarker(marker) {
     return dispatch => {
-        return fetchAddMarker(marker).then(res => {
-            dispatch({
-                type: 'ADD_MARKER',
-                payload: Object.assign({}, marker, {id: res.id})
+        return fetchAddMarker(marker)
+            .then(res => {
+                dispatch({
+                    type: 'ADD_MARKER',
+                    payload: Object.assign({}, marker, {id: res})
+                })
             })
-        })
     }
 }
 

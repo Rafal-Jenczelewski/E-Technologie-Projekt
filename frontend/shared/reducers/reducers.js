@@ -1,5 +1,4 @@
 export function markers(state = [], action) {
-    console.log('redM')
     switch (action.type) {
         case 'GET_MARKERS':
             return action.payload;
