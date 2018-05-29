@@ -8,7 +8,6 @@ public class Comment
 {
     private String Id;
     private String targetId;
-    private String authorId;
     private String authorName;
     private String content;
 
@@ -35,18 +34,6 @@ public class Comment
     public void setAuthorName( String authorName )
     {
         this.authorName = authorName;
-    }
-
-
-    public String getAuthorId()
-    {
-        return authorId;
-    }
-
-
-    public void setAuthorId( String authorId )
-    {
-        this.authorId = authorId;
     }
 
 
