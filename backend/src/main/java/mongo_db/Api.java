@@ -9,6 +9,7 @@ import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+import spark.Spark;
 import spark.utils.IOUtils;
 
 import java.io.IOException;
@@ -63,12 +64,29 @@ public class Api
 
     public static void main( String[] args )
     {
+        setUpFilters();
 
         setUpPostRequests();
 
         setUpGetRequsts();
 
         setUpPutRequests();
+
+        System.out.println( "Server is running..." );
+    }
+
+
+    private static void setUpFilters()
+    {
+        before( ( req, res ) -> {
+            System.out.println( "Received a request: " + req.url() );
+        } );
+        before( "(add|change)*", ( req, res ) -> {
+            if( !verify( req.headers( "ACCESS_TOKEN" ) ) )
+            {
+                halt( 401, "User is not logged in." );
+            }
+        } );
     }
 
 
@@ -83,45 +101,21 @@ public class Api
         }, gsonTransformer::toJson );
 
         post( "/addMarker", ( req, res ) -> {
-            if( verify( req.headers( "ACCESS-TOKEN" ) ) )
-            {
-                res.type( "application/json" );
-                Marker marker = gsonTransformer.fromJson( req.body(), Marker.class );
-                return mongo.addMarker( marker );
-            }
-            else
-            {
-                res.status( 401 );
-                return "User is not logged in.";
-            }
+            res.type( "application/json" );
+            Marker marker = gsonTransformer.fromJson( req.body(), Marker.class );
+            return mongo.addMarker( marker );
         }, gsonTransformer::toJson );
 
         post( "/addRoute", ( req, res ) -> {
-            if( verify( req.headers( "ACCESS-TOKEN" ) ) )
-            {
-                res.type( "application/json" );
-                Route route = gsonTransformer.fromJson( req.body(), Route.class );
-                return mongo.addRoute( route );
-            }
-            else
-            {
-                res.status( 401 );
-                return "User is not logged in.";
-            }
+            res.type( "application/json" );
+            Route route = gsonTransformer.fromJson( req.body(), Route.class );
+            return mongo.addRoute( route );
         }, gsonTransformer::toJson );
 
         post( "/addComment", ( req, res ) -> {
-            if( verify( req.headers( "ACCESS-TOKEN" ) ) )
-            {
-                res.type( "application/json" );
-                Comment comment = gsonTransformer.fromJson( req.body(), Comment.class );
-                return mongo.addComment( comment );
-            }
-            else
-            {
-                res.status( 401 );
-                return "User is not logged in.";
-            }
+            res.type( "application/json" );
+            Comment comment = gsonTransformer.fromJson( req.body(), Comment.class );
+            return mongo.addComment( comment );
         }, gsonTransformer::toJson );
     }
 
