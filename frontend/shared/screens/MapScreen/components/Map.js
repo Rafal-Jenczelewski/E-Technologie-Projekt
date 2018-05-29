@@ -4,7 +4,7 @@ import MapView, {Marker, Polyline} from 'react-native-maps'
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 
-import {getMarkers, getRoutes} from '../../../shared/actions/actions'
+import {getMarkers, getRoutes} from '../../../actions/actions'
 
 class Map extends Component {
     state = {
@@ -18,13 +18,11 @@ class Map extends Component {
     componentDidMount() {
         this.props.getRoutes();
         this.props.getMarkers();
-
-        // setTimeout(() => this.forceUpdate(), 1000);
     }
 
     render() {
         let markers = this.props.markers.map(m => (
-            <Marker key={m.id} title={m.name} key={m.id} coordinate={m.coordinate}/>));
+            <Marker key={m.id} title={m.name} description={m.description} key={m.id} coordinate={m.coordinate}/>));
         let routes = this.props.routes.map(m => (
             <Polyline key={m.id} coordinates={m.coordinates} strokeWidth={4} title={m.name}/>));
         let routeMarkers = this.props.newRouteMarkers.map(m => (

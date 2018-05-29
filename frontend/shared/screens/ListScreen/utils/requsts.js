@@ -1,5 +1,5 @@
 const api = "http://10.0.2.2:4567/";
-import store from '../../shared/store/store'
+import store from '../../../store/store'
 
 function getUserToken() {
     return store.getState().userInfo.userInfo;
@@ -7,6 +7,10 @@ function getUserToken() {
 
 function getUserID() {
     return store.getState().userInfo.userID
+}
+
+function getUserName() {
+    return store.getState().userInfo.name
 }
 
 function getHeaders() {
@@ -43,4 +47,14 @@ export function getComments(id) {
             content: "Nah, not worth it"
         }
     ])
+}
+
+export function fetchAddComment(comment) {
+    return fetch(api + "/addComment", {
+        method: 'post',
+        body: JSON.stringify(Object.assign({}, comment, {
+            authorId: getUserName()
+        })),
+        headers: getHeaders()
+    })
 }

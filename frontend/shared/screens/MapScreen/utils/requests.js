@@ -1,5 +1,5 @@
 const api = "http://10.0.2.2:4567/";
-import store from '../../../shared/store/store'
+import store from '../../../store/store'
 
 function getUserToken() {
     return store.getState().userInfo.userInfo;

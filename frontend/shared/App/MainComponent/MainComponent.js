@@ -16,10 +16,12 @@ class MainComponent extends Component {
     }
 
     onLogin(data) {
-        let {userId, token} = data.credentials;
+        //TODO: user name w creditionals - zmienic tez w commentScreen
+        let {userId, token, name} = data.credentials;
         let info = {
             userID: userId,
-            token
+            token,
+            name
         };
         console.log("LOGIN");
         console.log(data);

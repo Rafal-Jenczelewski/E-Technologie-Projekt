@@ -2,9 +2,9 @@ import React, {Component} from 'react'
 import {Text, View, StyleSheet, CheckBox, Button} from 'react-native'
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
-import {getRoutes, getMarkers} from '../../shared/actions/actions'
-import {resetUserInfo} from '../../shared/actions/actions'
-import {setGetOthers} from './actions'
+import {getRoutes, getMarkers} from '../../actions/actions'
+import {resetUserInfo} from '../../actions/actions'
+import {setGetOthers} from './actions/actions'
 import {StackNavigator} from 'react-navigation'
 
 let {FBLogin} = require('react-native-facebook-login')

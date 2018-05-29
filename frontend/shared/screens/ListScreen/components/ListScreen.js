@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {SectionList, View, Text, StyleSheet, PermissionsAndroid} from 'react-native'
-import MarkerView from './components/MarkerView'
+import MarkerView from './MarkerView'
 
 class ListScreen extends Component {
     static navigationOptions = {

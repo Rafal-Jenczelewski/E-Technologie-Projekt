@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {View, Text, StyleSheet, TouchableHighlight, CheckBox, ScrollView} from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
-import {changeIsPublic} from '../requsts'
+import {changeIsPublic} from '../utils/requsts'
 import {connect} from 'react-redux'
 
 class MarkerView extends Component {

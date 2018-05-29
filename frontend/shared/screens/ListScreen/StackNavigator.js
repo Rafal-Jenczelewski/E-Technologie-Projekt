@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {StackNavigator} from 'react-navigation'
-import ListScreen from './ListScreen'
-import CommentsScreen from './CommentsScreen'
+import ListScreen from './components/ListScreen'
+import CommentsScreen from './components/CommentsScreen'
 
 const mapNavigationStateParamsToProps = (SomeComponent) => {
     return class extends Component {

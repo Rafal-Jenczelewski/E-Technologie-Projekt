@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
-import {View, Button, Text, TextInput,StyleSheet, FlatList} from 'react-native'
-import {getComments} from './requsts'
+import {Button, FlatList, StyleSheet, Text, TextInput, View} from 'react-native'
+import {getComments, fetchAddComment} from '../utils/requsts'
 
 class CommentsScreen extends Component {
     static navigationOptions = {
@@ -35,12 +35,13 @@ class CommentsScreen extends Component {
         this.fetchComments();
     }
 
-    onSubmit({key}) {
-        if (key === 'Enter') {
-            //TODO: submit
-            this.setState({comment: ""})
-        }
-
+    onSubmit() {
+        fetchAddComment({
+            targetId: this.props.marker.id,
+            content: this.state.comment
+        });
+        this.setState({comment: ""});
+        this.fetchComments();
     }
 
     render() {
@@ -56,7 +57,8 @@ class CommentsScreen extends Component {
                 <View>{coords}</View>
             </View>
             <View style={styles.commentInput}>
-                <TextInput placeholder={"Tell others what you think..."} onChange={this.inputChange} onKeyPress={this.onSubmit}/>
+                <TextInput placeholder={"Tell others what you think..."} onChange={this.inputChange}/>
+                <Button onPress={this.onSubmit}>Comment</Button>
             </View>
             <FlatList style={styles.list}
                       data={this.state.comments}
