@@ -3,32 +3,57 @@ package mongo_db;
 import static spark.Spark.*;
 
 import com.google.gson.Gson;
-import java.util.concurrent.atomic.AtomicBoolean;
+import org.apache.http.HttpEntity;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import spark.utils.IOUtils;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.StringWriter;
+
 
 public class Api {
 
     private static MongoService mongo = new MongoService();
     private static Gson gsonTransformer = new Gson();
+    private static String baseVerifyURL = "graph.facebook.com/debug_token?input_token=";
+    private static String appID = "1661504553926840";
 
-
-    public static boolean verify(String token){
-        AtomicBoolean isVerified = new AtomicBoolean(false);
-        get("graph.facebook.com/debug_token?input_token={\"+token+\"}&access_token={1661504553926840}", (req, res) -> {
-            res.type("application/json");
-            if(res.body().contains("error")) isVerified.set(false);
-            else isVerified.set(true);
-            return res;
-        }, gsonTransformer::toJson);
-        return isVerified.get();
+    private static String buildVerifyURL(String userToken)
+    {
+        String url = baseVerifyURL;
+        url += userToken + "&access_token=" + appID;
+        return url;
     }
 
+    private static CloseableHttpClient httpClient = HttpClients.createDefault();
 
+    public static boolean verify(String token){
+        HttpGet getRequest = new HttpGet( buildVerifyURL( token ));
+        try
+        {
+            CloseableHttpResponse response = httpClient.execute( getRequest );
+            HttpEntity entity = response.getEntity();
+            InputStream stream = entity.getContent();
 
+            StringWriter writer = new StringWriter(  );
+            IOUtils.copy( stream, writer );
+            String responseBody = writer.toString();
 
+            FacebookVerifyResponseBody body = gsonTransformer.fromJson( responseBody, FacebookVerifyResponseBody.class );
+            return body.isIs_valid();
+        }
+        catch( IOException e )
+        {
+            e.printStackTrace();
+        }
+        return false;
+    }
 
     public static void main(String[] args) {
-
-
 
         post("/addSomeData", (req, res) -> {
             mongo.clear();
