@@ -9,7 +9,6 @@ import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
-import spark.Spark;
 import spark.utils.IOUtils;
 
 import java.io.IOException;
@@ -68,7 +67,7 @@ public class Api
 
         setUpPostRequests();
 
-        setUpGetRequsts();
+        setUpGetRequests();
 
         setUpPutRequests();
 
@@ -120,7 +119,7 @@ public class Api
     }
 
 
-    private static void setUpGetRequsts()
+    private static void setUpGetRequests()
     {
         get( "/getAllMarkers", ( req, res ) -> {
             res.type( "application/json" );
@@ -133,8 +132,6 @@ public class Api
         }, gsonTransformer::toJson );
 
         get( "/getMarkers", ( req, res ) -> {
-            System.out.println( req.queryParams( "getOthers" ) );
-            System.out.println( req.queryParams( "userID" ) );
             boolean owned = Boolean.valueOf( req.queryParams( "getOthers" ) );
             Long userID = Long.valueOf( req.queryParams( "userID" ) );
             res.type( "application/json" );
@@ -143,7 +140,6 @@ public class Api
         }, gsonTransformer::toJson );
 
         get( "/getComments", ( req, res ) -> {
-            System.out.println( req.queryParams( "markerId" ) );
             String markerId = gsonTransformer.fromJson( req.body(), String.class );
             res.type( "application/json" );
             return mongo.getComments( markerId );
@@ -162,7 +158,6 @@ public class Api
     private static void setUpPutRequests()
     {
         put( "/changeStatus", ( req, res ) -> {
-            System.out.println( req.body() );
             ChangeStatusReqBody body =
                             gsonTransformer.fromJson( req.body(), ChangeStatusReqBody.class );
             mongo.changeStatus( body.getId(), body.isPublic() );
