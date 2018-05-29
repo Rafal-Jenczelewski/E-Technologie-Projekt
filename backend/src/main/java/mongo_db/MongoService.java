@@ -1,5 +1,8 @@
 package mongo_db;
 
+import mongo_db.DAO.Comment;
+import mongo_db.DAO.Marker;
+import mongo_db.DAO.Route;
 import org.bson.types.ObjectId;
 import org.mongodb.morphia.Datastore;
 import org.mongodb.morphia.Morphia;

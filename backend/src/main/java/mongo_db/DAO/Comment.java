@@ -2,7 +2,7 @@
  * Copyright (C) 2017 Nokia. All rights reserved.
  */
 
-package mongo_db;
+package mongo_db.DAO;
 
 public class Comment
 {

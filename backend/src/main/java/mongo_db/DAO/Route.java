@@ -1,30 +1,29 @@
-package mongo_db;
+package mongo_db.DAO;
 
 import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Id;
 
 @Entity
-public class Marker {
-
+public class Route {
     @Id
     private String id;
     private String name;
     private Long ownerID;
     private String description;
-    private Boolean isPublic;
-    private Coordinates coordinate;
+    private boolean isPublic;
 
+    private Coordinates[] coordinates;
 
     //For GSON
-    public Marker(){}
+    public Route() {}
 
-    public Marker(Double longitude, Double latitude, String name, String description, Boolean isPublic, Long ownerID) {
+    public Route(Coordinates[] coordinates, String name, String description, Boolean isPublic, Long ownerID) {
         super();
-        coordinate = new Coordinates(latitude, longitude);
+        this.coordinates = coordinates;
         this.name = name;
+        this.ownerID = ownerID;
         this.description = description;
         this.isPublic = isPublic;
-        this.ownerID = ownerID;
     }
 
     public String getId() {
@@ -59,12 +58,12 @@ public class Marker {
         this.isPublic = isPublic;
     }
 
-    public Coordinates getCoordinate() {
-        return coordinate;
+    public Coordinates[] getCoordinates() {
+        return coordinates;
     }
 
-    public void setCoordinate(Coordinates coordinate) {
-        this.coordinate = coordinate;
+    public void setCoordinates(Coordinates[] coordinates) {
+        this.coordinates = coordinates;
     }
 
     public Long getOwnerID() {
