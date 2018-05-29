@@ -8,8 +8,8 @@ public class Comment
 {
     private String Id;
     private String targetId;
-    private String AuthorId;
-    private String AuthorName;
+    private String authorId;
+    private String authorName;
     private String content;
 
     public Comment(){}
@@ -28,25 +28,25 @@ public class Comment
 
     public String getAuthorName()
     {
-        return AuthorName;
+        return authorName;
     }
 
 
     public void setAuthorName( String authorName )
     {
-        AuthorName = authorName;
+        this.authorName = authorName;
     }
 
 
     public String getAuthorId()
     {
-        return AuthorId;
+        return authorId;
     }
 
 
     public void setAuthorId( String authorId )
     {
-        AuthorId = authorId;
+        this.authorId = authorId;
     }
 
 
