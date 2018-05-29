@@ -4,65 +4,18 @@ import static spark.Spark.*;
 
 import com.google.gson.Gson;
 import mongo_db.DAO.*;
-import org.apache.http.HttpEntity;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
-import spark.utils.IOUtils;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.StringWriter;
+import mongo_db.FacebookLogin.FacebookAuth;
 
 
 public class Api
 {
-
-    private static MongoService mongo = new MongoService();
+    private static MongoService mongo;// = new MongoService();
     private static Gson gsonTransformer = new Gson();
-    private static String baseVerifyURL = "graph.facebook.com/debug_token?input_token=";
-    private static String appID = "1661504553926840";
-
-
-    private static String buildVerifyURL( String userToken )
-    {
-        String url = baseVerifyURL;
-        url += userToken + "&access_token=" + appID;
-        return url;
-    }
-
-
-    private static CloseableHttpClient httpClient = HttpClients.createDefault();
-
-
-    private static boolean verify( String token )
-    {
-        HttpGet getRequest = new HttpGet( buildVerifyURL( token ) );
-        try
-        {
-            CloseableHttpResponse response = httpClient.execute( getRequest );
-            HttpEntity entity = response.getEntity();
-            InputStream stream = entity.getContent();
-
-            StringWriter writer = new StringWriter();
-            IOUtils.copy( stream, writer );
-            String responseBody = writer.toString();
-
-            FacebookVerifyResponseBody body = gsonTransformer.fromJson( responseBody,
-                            FacebookVerifyResponseBody.class );
-            return body.isIs_valid();
-        }
-        catch( IOException e )
-        {
-            e.printStackTrace();
-        }
-        return false;
-    }
-
 
     public static void main( String[] args )
     {
+        FacebookAuth.getAccessToken();
+
         setUpFilters();
 
         setUpPostRequests();
@@ -80,8 +33,9 @@ public class Api
         before( ( req, res ) -> {
             System.out.println( "Received a request: " + req.url() );
         } );
-        before( "(add|change)*", ( req, res ) -> {
-            if( !verify( req.headers( "ACCESS-TOKEN" ) ) )
+        before( "/*", ( req, res ) -> {
+            System.out.println("Verifing...");
+            if( !FacebookAuth.verify( req.headers( "ACCESS-TOKEN" ) ) )
             {
                 halt( 401, "User is not logged in." );
             }

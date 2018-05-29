@@ -2,7 +2,7 @@
  * Copyright (C) 2017 Nokia. All rights reserved.
  */
 
-package mongo_db.DAO;
+package mongo_db.FacebookLogin;
 
 public class FacebookVerifyResponseBody
 {
